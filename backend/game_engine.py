@@ -881,12 +881,35 @@ class MultilingualGameEngine:
                 "try_again": tpl["try_again"]
             }
 
+        elif mode == "jigsaw_puzzle":
+            puzzles = [
+                {"id": "tea_garden", "name": "Assam Tea Garden", "img": "/static/images/tea_garden.jpg", "emoji": "🍵"},
+                {"id": "golden_bell", "name": "Golden Temple Bell", "img": "/static/images/golden_bell.jpg", "emoji": "🛕"},
+                {"id": "kopou_orchid", "name": "Kopou Orchid", "img": "/static/images/kopou_orchid.jpg", "emoji": "🌺"}
+            ]
+            selected_p = puzzles[0]
+            pieces_dim = 2 if level >= 3 else 3
+            return {
+                "mode": "jigsaw_puzzle",
+                "lang": lang,
+                "clinical_level": level,
+                "puzzle_info": selected_p,
+                "puzzles_list": puzzles,
+                "rows": pieces_dim,
+                "cols": pieces_dim,
+                "total_pieces": pieces_dim * pieces_dim,
+                "instruction": f"🧩 {selected_p['name']} Jigsaw Puzzle",
+                "subtext": "Drag the pieces or tap to place them into the picture",
+                "tts_prompt": f"Please rebuild the {selected_p['name']} puzzle picture.",
+                "praise": "Wonderful visuospatial recall! You completed the puzzle!"
+            }
+
         else:
             return self.generate_round("spot_and_name", difficulty, lang, level)
 
     def evaluate_answer(self, mode: str, user_selection: Any, target_data: Any) -> Dict[str, Any]:
         """Evaluates game interaction correctness."""
-        if mode == "spot_and_name":
+        if mode in ["spot_and_name", "daily_routine"]:
             is_correct = str(user_selection) == str(target_data)
             return {"is_correct": is_correct}
         elif mode == "memory_recall":
@@ -894,7 +917,7 @@ class MultilingualGameEngine:
             target_set = set(target_data) if isinstance(target_data, list) else {target_data}
             is_correct = user_set == target_set
             return {"is_correct": is_correct}
-        elif mode == "card_match":
+        elif mode in ["card_match", "jigsaw_puzzle"]:
             return {"is_correct": bool(user_selection)}
         return {"is_correct": False}
 
@@ -907,7 +930,7 @@ class MultilingualGameEngine:
     ) -> Dict[str, Any]:
         """
         Clinical Assessment Engine (Mapped to MoCA / MMSE 30-Point Screening Framework)
-        Evaluates cognitive domains: Object Naming, Visual Recall, Working Memory, and Reaction Speed.
+        Evaluates cognitive domains: Object Naming, Visual Recall, Working Memory, Visuospatial Function, and Reaction Speed.
         """
         if total_rounds == 0:
             correct_count = 0
@@ -920,11 +943,13 @@ class MultilingualGameEngine:
         valid_times = [h.get("response_time_ms", 0) for h in history if h.get("response_time_ms", 0) > 0]
         avg_time_sec = round((sum(valid_times) / len(valid_times) / 1000.0), 1) if valid_times else round(avg_latency_ms / 1000.0, 1) or 3.2
 
-        # Domain breakdown
+        # Domain breakdown (MoCA / MMSE Framework)
         domain_stats = {
             "spot_and_name": {"name": "Object Identification & Naming", "total": 0, "correct": 0, "pts": 10},
             "memory_recall": {"name": "Short-Term Delayed Recall", "total": 0, "correct": 0, "pts": 10},
-            "card_match": {"name": "Working Memory & Executive Function", "total": 0, "correct": 0, "pts": 10}
+            "card_match": {"name": "Working Memory & Executive Function", "total": 0, "correct": 0, "pts": 10},
+            "daily_routine": {"name": "Temporal Orientation & Routine Recall", "total": 0, "correct": 0, "pts": 10},
+            "jigsaw_puzzle": {"name": "Visuospatial & Constructional Ability", "total": 0, "correct": 0, "pts": 10}
         }
         for h in history:
             m = h.get("mode", "spot_and_name")

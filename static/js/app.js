@@ -1,7 +1,7 @@
 /**
  * Senior Memory Game & Clinical Dementia Care Platform App Coordinator
  * Full Native UI & Full-Sentence Voice Engine for all Indian States & Regional Languages
- * Doctor-Grade AI Adaptive Level & Cognitive Assessment Engine (MoCA/MMSE Framework)
+ * Doctor-Grade AI Adaptive Level, Cognitive Assessment Engine (MoCA/MMSE), & Senior Jigsaw Visuospatial Therapy
  */
 
 const UI_STRINGS = {
@@ -20,6 +20,8 @@ const UI_STRINGS = {
     modeSpot: "🎯 Spot Item (Naming)",
     modeRecall: "🧠 Remember (Recall)",
     modeMatch: "🃏 Match Pairs (Working Memory)",
+    modeRoutine: "🌅 Routine (Orientation)",
+    modePuzzle: "🧩 Jigsaw (Visuospatial)",
     cardBadge: "Card"
   },
   mr: {
@@ -36,6 +38,8 @@ const UI_STRINGS = {
     modeSpot: "🎯 वस्तू ओळखा",
     modeRecall: "🧠 लक्षात ठेवा",
     modeMatch: "🃏 जोड्या लावा",
+    modeRoutine: "🌅 दिनचर्या ओळखा",
+    modePuzzle: "🧩 जिगसॉ पझल",
     cardBadge: "चित्र"
   },
   hi: {
@@ -52,6 +56,8 @@ const UI_STRINGS = {
     modeSpot: "🎯 वस्तु पहचानें",
     modeRecall: "🧠 याद रखें",
     modeMatch: "🃏 जोड़ी मिलाएं",
+    modeRoutine: "🌅 दिनचर्या पहचानें",
+    modePuzzle: "🧩 जिगसॉ पहेली",
     cardBadge: "कार्ड"
   },
 
@@ -70,6 +76,8 @@ const UI_STRINGS = {
     modeSpot: "🎯 বস্তু বাছক",
     modeRecall: "🧠 মনত ৰাখক",
     modeMatch: "🃏 জোৰা মিলাওক",
+    modeRoutine: "🌅 ৰুটিন চিনাক্ত",
+    modePuzzle: "🧩 ছবি জোৰা (পাজল)",
     cardBadge: "কাৰ্ড"
   },
   brx: {
@@ -86,6 +94,8 @@ const UI_STRINGS = {
     modeSpot: "🎯 बेसाद दिहुन",
     modeRecall: "🧠 गोसोआव लाखि",
     modeMatch: "🃏 जरा मिलाय",
+    modeRoutine: "🌅 नेम सायख'",
+    modePuzzle: "🧩 सावगारि जरा",
     cardBadge: "कार्ड"
   },
 
@@ -104,6 +114,8 @@ const UI_STRINGS = {
     modeSpot: "🎯 পোৎ থিবীয়ু",
     modeRecall: "🧠 নীংশিংবীয়ু",
     modeMatch: "🃏 মযোল মান্নহনবীযু",
+    modeRoutine: "🌅 নোংমগী থবক",
+    modePuzzle: "🧩 পজল শান্নবা",
     cardBadge: "কার্ড"
   },
 
@@ -122,6 +134,8 @@ const UI_STRINGS = {
     modeSpot: "🎯 বস্তু খুঁজুন",
     modeRecall: "🧠 মনে রাখুন",
     modeMatch: "🃏 জোড়া মেলান",
+    modeRoutine: "🌅 দিনলিপি চেনা",
+    modePuzzle: "🧩 ছবির ধাঁধা (পাজল)",
     cardBadge: "কার্ড"
   },
   trp: {
@@ -138,6 +152,8 @@ const UI_STRINGS = {
     modeSpot: "🎯 Naina di",
     modeRecall: "🧠 Khorongo ton di",
     modeMatch: "🃏 Jora naina di",
+    modeRoutine: "🌅 Salbroni",
+    modePuzzle: "🧩 Nokha puzzle",
     cardBadge: "Card"
   },
 
@@ -156,6 +172,8 @@ const UI_STRINGS = {
     modeSpot: "🎯 Zawng rawh",
     modeRecall: "🧠 Hre reng rawh",
     modeMatch: "🃏 A inang zawng rawh",
+    modeRoutine: "🌅 Nitin thil",
+    modePuzzle: "🧩 Thlalak Puzzle",
     cardBadge: "Card"
   },
 
@@ -174,6 +192,8 @@ const UI_STRINGS = {
     modeSpot: "🎯 Shem ia ka mar",
     modeRecall: "🧠 Kynmaw",
     modeMatch: "🃏 Pynsyriem",
+    modeRoutine: "🌅 Man ka sngi",
+    modePuzzle: "🧩 Jigsaw Dur",
     cardBadge: "Card"
   },
   grt: {
@@ -190,6 +210,8 @@ const UI_STRINGS = {
     modeSpot: "🎯 Am·bo",
     modeRecall: "🧠 Gisik ra·bo",
     modeMatch: "🃏 Apsangiparang",
+    modeRoutine: "🌅 Salanti kam",
+    modePuzzle: "🧩 Noksa Puzzle",
     cardBadge: "Card"
   },
 
@@ -208,6 +230,8 @@ const UI_STRINGS = {
     modeSpot: "🎯 वस्तु चिन्नुहोस्",
     modeRecall: "🧠 सम्झनुहोस्",
     modeMatch: "🃏 जोडी मिलाउनुहोस्",
+    modeRoutine: "🌅 दिनचर्या पहिचान",
+    modePuzzle: "🧩 जिगस puzzle",
     cardBadge: "कार्ड"
   },
   lep: {
@@ -224,6 +248,8 @@ const UI_STRINGS = {
     modeSpot: "🎯 Shuk mat",
     modeRecall: "🧠 Sem mat",
     modeMatch: "🃏 Ríp zong",
+    modeRoutine: "🌅 Súng",
+    modePuzzle: "🧩 Puzzle",
     cardBadge: "Card"
   },
   bhu: {
@@ -240,6 +266,8 @@ const UI_STRINGS = {
     modeSpot: "🎯 Thsol dang",
     modeRecall: "🧠 Sem la zhog",
     modeMatch: "🃏 Dra bo",
+    modeRoutine: "🌅 Nyin re",
+    modePuzzle: "🧩 Ri mo puzzle",
     cardBadge: "Card"
   },
 
@@ -258,6 +286,8 @@ const UI_STRINGS = {
     modeSpot: "🎯 Busang",
     modeRecall: "🧠 Bilemtetang",
     modeMatch: "🃏 Medemdang",
+    modeRoutine: "🌅 Anogo shia",
+    modePuzzle: "🧩 Noksa Puzzle",
     cardBadge: "Card"
   },
   njm: {
@@ -274,6 +304,8 @@ const UI_STRINGS = {
     modeSpot: "🎯 Ngulie",
     modeRecall: "🧠 Kemelhu",
     modeMatch: "🃏 Kethokethe",
+    modeRoutine: "🌅 Dzükhe",
+    modePuzzle: "🧩 Puzzle",
     cardBadge: "Card"
   },
   nsm: {
@@ -290,6 +322,8 @@ const UI_STRINGS = {
     modeSpot: "🎯 Lho",
     modeRecall: "🧠 Kimthe",
     modeMatch: "🃏 Kheki",
+    modeRoutine: "🌅 Ayeghi",
+    modePuzzle: "🧩 Puzzle",
     cardBadge: "Card"
   },
 
@@ -308,6 +342,8 @@ const UI_STRINGS = {
     modeSpot: "🎯 Paato",
     modeRecall: "🧠 Minto",
     modeMatch: "🃏 Aju aju",
+    modeRoutine: "🌅 Alo rigo",
+    modePuzzle: "🧩 Puzzle",
     cardBadge: "Card"
   },
   adi: {
@@ -324,6 +360,8 @@ const UI_STRINGS = {
     modeSpot: "🎯 Pabi",
     modeRecall: "🧠 Minbi",
     modeMatch: "🃏 Aju keka",
+    modeRoutine: "🌅 Longe kam",
+    modePuzzle: "🧩 Puzzle",
     cardBadge: "Card"
   },
   gal: {
@@ -340,6 +378,8 @@ const UI_STRINGS = {
     modeSpot: "🎯 Pabi",
     modeRecall: "🧠 Minbi",
     modeMatch: "🃏 Aju keka",
+    modeRoutine: "🌅 Longe kam",
+    modePuzzle: "🧩 Puzzle",
     cardBadge: "Card"
   }
 };
@@ -364,8 +404,28 @@ class SimpleMindBloomApp {
     this.recallTimer = null;
     this.cardPair = [];
 
+    // Jigsaw Puzzle State
+    this.puzzleRows = 2;
+    this.puzzleCols = 2;
+    this.jigsawPieces = [];
+    this.horizontalEdges = [];
+    this.verticalEdges = [];
+    this.selectedJigsawGroup = null;
+    this.dragStartX = 0;
+    this.dragStartY = 0;
+    this.originalJigsawPositions = [];
+    this.puzzleMovesCount = 0;
+    this.puzzleStartTime = null;
+    this.puzzleTimerInterval = null;
+    this.puzzleImageSrc = '/static/images/tea_garden.jpg';
+    this.puzzleImageName = 'Assam Tea Garden';
+    this.puzzleImage = new Image();
+    this.showGhostGuide = true;
+    this.puzzleCompleted = false;
+
     this.initElements();
     this.bindEvents();
+    this.initJigsawEvents();
     this.startSession();
   }
 
@@ -403,7 +463,20 @@ class SimpleMindBloomApp {
     this.modeRecall = document.getElementById('modeRecall');
     this.modeMatch = document.getElementById('modeMatch');
     this.modeRoutine = document.getElementById('modeRoutine');
+    this.modePuzzle = document.getElementById('modePuzzle');
     this.nerSelect = document.getElementById('nerLanguageSelect');
+
+    // Jigsaw Puzzle Elements
+    this.puzzleContainer = document.getElementById('puzzleContainer');
+    this.puzzleCanvas = document.getElementById('puzzleCanvas');
+    this.puzzleCtx = this.puzzleCanvas ? this.puzzleCanvas.getContext('2d') : null;
+    this.puzzleMoves = document.getElementById('puzzleMoves');
+    this.puzzleTimer = document.getElementById('puzzleTimer');
+    this.puzzlePiecesCount = document.getElementById('puzzlePiecesCount');
+    this.puzzleGuideStatus = document.getElementById('puzzleGuideStatus');
+    this.puzzleShuffleBtn = document.getElementById('puzzleShuffleBtn');
+    this.puzzleHintToggleBtn = document.getElementById('puzzleHintToggleBtn');
+    this.puzzleRestartBtn = document.getElementById('puzzleRestartBtn');
 
     // Modals
     this.doctorModalOverlay = document.getElementById('doctorModalOverlay');
@@ -471,7 +544,7 @@ class SimpleMindBloomApp {
     });
 
     // Game Mode Pills
-    [this.modeSpot, this.modeRecall, this.modeMatch, this.modeRoutine].filter(Boolean).forEach(btn => {
+    [this.modeSpot, this.modeRecall, this.modeMatch, this.modeRoutine, this.modePuzzle].filter(Boolean).forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.mode-pill').forEach(p => p.classList.remove('active'));
         btn.classList.add('active');
@@ -551,9 +624,11 @@ class SimpleMindBloomApp {
     this.hearAgainText.textContent = ui.hearAgain;
     this.nextBtnText.textContent = ui.nextBtn;
     this.chooseGameLabel.textContent = ui.chooseGame;
-    this.modeSpot.textContent = ui.modeSpot;
-    this.modeRecall.textContent = ui.modeRecall;
-    this.modeMatch.textContent = ui.modeMatch;
+    if (this.modeSpot) this.modeSpot.textContent = ui.modeSpot;
+    if (this.modeRecall) this.modeRecall.textContent = ui.modeRecall;
+    if (this.modeMatch) this.modeMatch.textContent = ui.modeMatch;
+    if (this.modeRoutine) this.modeRoutine.textContent = ui.modeRoutine;
+    if (this.modePuzzle) this.modePuzzle.textContent = ui.modePuzzle;
   }
 
   async loadRound() {
@@ -563,6 +638,15 @@ class SimpleMindBloomApp {
     this.recallSelected.clear();
     this.cardPair = [];
     this.roundStartTime = Date.now();
+
+    // Toggle container visibility based on mode
+    if (this.currentMode === 'jigsaw_puzzle') {
+      this.cardsGrid.classList.add('hidden');
+      this.puzzleContainer.classList.remove('hidden');
+    } else {
+      this.cardsGrid.classList.remove('hidden');
+      this.puzzleContainer.classList.add('hidden');
+    }
 
     try {
       const res = await fetch('/api/game/generate-round', {
@@ -594,6 +678,8 @@ class SimpleMindBloomApp {
       this.renderMatch();
     } else if (this.currentMode === 'daily_routine') {
       this.renderRoutine();
+    } else if (this.currentMode === 'jigsaw_puzzle') {
+      this.renderJigsaw();
     }
   }
 
@@ -638,7 +724,6 @@ class SimpleMindBloomApp {
 
     this.cardsGrid.innerHTML = '';
     const choices = this.currentRound.choices || [];
-    const isAssistedLevel = this.currentRound.clinical_level >= 3;
 
     choices.forEach((item, idx) => {
       const card = document.createElement('div');
@@ -670,14 +755,13 @@ class SimpleMindBloomApp {
     const praise = this.currentRound.praise || "Wonderful job!";
     const tryAgain = this.currentRound.try_again || "Please try again!";
 
-    // Submit answer to server to evaluate clinical level & scores
     try {
       const res = await fetch('/api/game/submit-answer', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           session_id: this.sessionId,
-          mode: 'spot_and_name',
+          mode: this.currentMode,
           user_selection: selectedId,
           target_data: this.currentRound.target_id,
           response_time_ms: latencyMs
@@ -727,7 +811,6 @@ class SimpleMindBloomApp {
     this.memoryNotice.classList.remove('hidden');
     this.memoryNoticeText.textContent = this.currentRound.subtext;
 
-    // Countdown bar animation
     if (this.countdownBar) {
       this.countdownBar.style.transition = 'none';
       this.countdownBar.style.width = '100%';
@@ -931,6 +1014,473 @@ class SimpleMindBloomApp {
   }
 
   /* =========================================================
+     Mode 5: Senior Jigsaw Puzzle (Visuospatial & Constructional)
+     ========================================================= */
+
+  initJigsawEvents() {
+    if (!this.puzzleCanvas) return;
+
+    // Canvas size
+    this.puzzleCanvas.width = 1200;
+    this.puzzleCanvas.height = 720;
+    this.puzzleBoardWidth = 800;
+    this.puzzleBoardHeight = 450;
+    this.puzzleBoardX = 200;
+    this.puzzleBoardY = 90;
+
+    // Theme Chips
+    document.querySelectorAll('.theme-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        document.querySelectorAll('.theme-chip').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        this.puzzleImageSrc = chip.getAttribute('data-img');
+        this.puzzleImageName = chip.getAttribute('data-name');
+        this.startJigsawPuzzle();
+      });
+    });
+
+    // Control buttons
+    if (this.puzzleShuffleBtn) {
+      this.puzzleShuffleBtn.addEventListener('click', () => this.startJigsawPuzzle());
+    }
+    if (this.puzzleRestartBtn) {
+      this.puzzleRestartBtn.addEventListener('click', () => this.startJigsawPuzzle());
+    }
+    if (this.puzzleHintToggleBtn) {
+      this.puzzleHintToggleBtn.addEventListener('click', () => {
+        this.showGhostGuide = !this.showGhostGuide;
+        this.puzzleGuideStatus.textContent = this.showGhostGuide ? 'ON' : 'OFF';
+        this.puzzleGuideStatus.style.color = this.showGhostGuide ? '#059669' : '#e11d48';
+        this.drawJigsaw();
+      });
+    }
+
+    // Pointer events for Canvas Drag & Snap
+    this.puzzleCanvas.addEventListener('pointerdown', (e) => this.handlePuzzlePointerDown(e));
+    this.puzzleCanvas.addEventListener('pointermove', (e) => this.handlePuzzlePointerMove(e));
+    this.puzzleCanvas.addEventListener('pointerup', (e) => this.handlePuzzlePointerUp(e));
+  }
+
+  renderJigsaw() {
+    this.mainQuestion.textContent = this.currentRound.instruction || "🧩 Jigsaw Puzzle Therapy";
+    this.simpleHint.textContent = this.currentRound.subtext || "Drag pieces to rebuild the peaceful picture";
+    window.voiceEngine.speak(this.currentRound.tts_prompt || "Rebuild the picture by dragging the puzzle pieces.");
+
+    // Adapt piece count according to clinical Level (Level 4/3: 2x2 = 4 pcs, Level 2/1: 3x3 = 9 pcs)
+    this.puzzleRows = (this.currentLevel >= 3) ? 2 : 3;
+    this.puzzleCols = (this.currentLevel >= 3) ? 2 : 3;
+    this.puzzlePiecesCount.textContent = this.puzzleRows * this.puzzleCols;
+
+    this.startJigsawPuzzle();
+  }
+
+  startJigsawPuzzle() {
+    this.puzzleMovesCount = 0;
+    this.puzzleMoves.textContent = "0";
+    this.puzzleCompleted = false;
+    this.selectedJigsawGroup = null;
+
+    this.puzzlePieceWidth = this.puzzleBoardWidth / this.puzzleCols;
+    this.puzzlePieceHeight = this.puzzleBoardHeight / this.puzzleRows;
+    this.puzzleTabSize = Math.min(this.puzzlePieceWidth, this.puzzlePieceHeight) * 0.18;
+
+    this.puzzleImage.src = this.puzzleImageSrc;
+    this.puzzleImage.onload = () => {
+      this.generatePuzzleEdges();
+      this.createJigsawPieces();
+      this.shuffleJigsawPieces();
+      this.startJigsawTimer();
+      this.drawJigsaw();
+    };
+  }
+
+  startJigsawTimer() {
+    clearInterval(this.puzzleTimerInterval);
+    this.puzzleStartTime = Date.now();
+    this.puzzleTimerInterval = setInterval(() => {
+      if (!this.puzzleStartTime) return;
+      const sec = Math.floor((Date.now() - this.puzzleStartTime) / 1000);
+      const m = String(Math.floor(sec / 60)).padStart(2, '0');
+      const s = String(sec % 60).padStart(2, '0');
+      this.puzzleTimer.textContent = `${m}:${s}`;
+    }, 1000);
+  }
+
+  generatePuzzleEdges() {
+    this.horizontalEdges = [];
+    this.verticalEdges = [];
+
+    for (let r = 0; r <= this.puzzleRows; r++) {
+      this.horizontalEdges[r] = [];
+      for (let c = 0; c < this.puzzleCols; c++) {
+        this.horizontalEdges[r][c] = (r === 0 || r === this.puzzleRows) ? 0 : (Math.random() < 0.5 ? 1 : -1);
+      }
+    }
+
+    for (let r = 0; r < this.puzzleRows; r++) {
+      this.verticalEdges[r] = [];
+      for (let c = 0; c <= this.puzzleCols; c++) {
+        this.verticalEdges[r][c] = (c === 0 || c === this.puzzleCols) ? 0 : (Math.random() < 0.5 ? 1 : -1);
+      }
+    }
+  }
+
+  createJigsawPieces() {
+    this.jigsawPieces = [];
+    let id = 0;
+
+    for (let r = 0; r < this.puzzleRows; r++) {
+      for (let c = 0; c < this.puzzleCols; c++) {
+        this.jigsawPieces.push({
+          id: id++,
+          row: r,
+          col: c,
+          correctX: this.puzzleBoardX + c * this.puzzlePieceWidth,
+          correctY: this.puzzleBoardY + r * this.puzzlePieceHeight,
+          x: 0,
+          y: 0,
+          group: id,
+          placed: false
+        });
+      }
+    }
+  }
+
+  shuffleJigsawPieces() {
+    const spreadPositions = [
+      { x: 30, y: 50 },
+      { x: 30, y: 250 },
+      { x: 30, y: 460 },
+      { x: 1010, y: 50 },
+      { x: 1010, y: 250 },
+      { x: 1010, y: 460 },
+      { x: 340, y: 560 },
+      { x: 620, y: 560 },
+      { x: 880, y: 560 }
+    ];
+
+    spreadPositions.sort(() => Math.random() - 0.5);
+
+    this.jigsawPieces.forEach((p, idx) => {
+      p.x = spreadPositions[idx % spreadPositions.length].x;
+      p.y = spreadPositions[idx % spreadPositions.length].y;
+      p.group = p.id + 1;
+      p.placed = false;
+    });
+
+    this.jigsawPieces.sort(() => Math.random() - 0.5);
+  }
+
+  drawJigsaw() {
+    const ctx = this.puzzleCtx;
+    if (!ctx) return;
+
+    ctx.clearRect(0, 0, this.puzzleCanvas.width, this.puzzleCanvas.height);
+
+    // Dark slate canvas background
+    ctx.fillStyle = "#0f172a";
+    ctx.fillRect(0, 0, this.puzzleCanvas.width, this.puzzleCanvas.height);
+
+    // Board area
+    ctx.fillStyle = "rgba(255, 255, 255, 0.05)";
+    ctx.fillRect(this.puzzleBoardX, this.puzzleBoardY, this.puzzleBoardWidth, this.puzzleBoardHeight);
+
+    // Ghost Image Guide for elderly visual support
+    if (this.showGhostGuide && this.puzzleImage.complete) {
+      ctx.save();
+      ctx.globalAlpha = 0.28;
+      ctx.drawImage(this.puzzleImage, this.puzzleBoardX, this.puzzleBoardY, this.puzzleBoardWidth, this.puzzleBoardHeight);
+      ctx.restore();
+    }
+
+    // Grid lines
+    ctx.save();
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.2)";
+    ctx.lineWidth = 2;
+    for (let r = 0; r < this.puzzleRows; r++) {
+      for (let c = 0; c < this.puzzleCols; c++) {
+        ctx.strokeRect(
+          this.puzzleBoardX + c * this.puzzlePieceWidth,
+          this.puzzleBoardY + r * this.puzzlePieceHeight,
+          this.puzzlePieceWidth,
+          this.puzzlePieceHeight
+        );
+      }
+    }
+    ctx.restore();
+
+    // Draw pieces
+    this.jigsawPieces.forEach(p => this.drawJigsawPiece(p));
+  }
+
+  createJigsawPiecePath(p) {
+    const path = new Path2D();
+    const x = p.x;
+    const y = p.y;
+    const w = this.puzzlePieceWidth;
+    const h = this.puzzlePieceHeight;
+
+    path.moveTo(x, y);
+
+    // Top
+    if (p.row === 0) {
+      path.lineTo(x + w, y);
+    } else {
+      this.drawJigsawEdge(path, x, y, w, this.horizontalEdges[p.row][p.col], true);
+    }
+
+    // Right
+    if (p.col === this.puzzleCols - 1) {
+      path.lineTo(x + w, y + h);
+    } else {
+      this.drawJigsawEdge(path, x + w, y, h, this.verticalEdges[p.row][p.col + 1], false);
+    }
+
+    // Bottom
+    if (p.row === this.puzzleRows - 1) {
+      path.lineTo(x, y + h);
+    } else {
+      this.drawJigsawEdge(path, x + w, y + h, -w, this.horizontalEdges[p.row + 1][p.col], true);
+    }
+
+    // Left
+    if (p.col === 0) {
+      path.lineTo(x, y);
+    } else {
+      this.drawJigsawEdge(path, x, y + h, -h, this.verticalEdges[p.row][p.col], false);
+    }
+
+    path.closePath();
+    return path;
+  }
+
+  drawJigsawEdge(path, x, y, len, outward, isHorizontal) {
+    const dir = len >= 0 ? 1 : -1;
+    const size = Math.abs(len);
+    const start = size * 0.35;
+    const end = size * 0.65;
+    const center = size * 0.50;
+    const tab = this.puzzleTabSize * outward;
+
+    if (isHorizontal) {
+      path.lineTo(x + dir * start, y);
+      if (outward !== 0) {
+        path.bezierCurveTo(
+          x + dir * (size * 0.38), y,
+          x + dir * (size * 0.38), y + tab,
+          x + dir * center, y + tab
+        );
+        path.bezierCurveTo(
+          x + dir * (size * 0.62), y + tab,
+          x + dir * (size * 0.62), y,
+          x + dir * end, y
+        );
+      }
+      path.lineTo(x + dir * size, y);
+    } else {
+      path.lineTo(x, y + dir * start);
+      if (outward !== 0) {
+        path.bezierCurveTo(
+          x, y + dir * (size * 0.38),
+          x + tab, y + dir * (size * 0.38),
+          x + tab, y + dir * center
+        );
+        path.bezierCurveTo(
+          x + tab, y + dir * (size * 0.62),
+          x, y + dir * (size * 0.62),
+          x, y + dir * end
+        );
+      }
+      path.lineTo(x, y + dir * size);
+    }
+  }
+
+  drawJigsawPiece(piece) {
+    const ctx = this.puzzleCtx;
+    const path = this.createJigsawPiecePath(piece);
+
+    ctx.save();
+    ctx.shadowColor = "rgba(0,0,0,0.6)";
+    ctx.shadowBlur = 10;
+    ctx.shadowOffsetX = 3;
+    ctx.shadowOffsetY = 4;
+    ctx.clip(path);
+
+    const imageX = piece.x - piece.col * this.puzzlePieceWidth;
+    const imageY = piece.y - piece.row * this.puzzlePieceHeight;
+
+    ctx.drawImage(this.puzzleImage, imageX, imageY, this.puzzleBoardWidth, this.puzzleBoardHeight);
+    ctx.restore();
+
+    ctx.save();
+    ctx.strokeStyle = piece.placed ? "rgba(16, 185, 129, 0.9)" : "rgba(255, 255, 255, 0.85)";
+    ctx.lineWidth = piece.placed ? 3 : 2;
+    ctx.stroke(path);
+    ctx.restore();
+  }
+
+  getPuzzleCanvasMousePos(e) {
+    const rect = this.puzzleCanvas.getBoundingClientRect();
+    const scaleX = this.puzzleCanvas.width / rect.width;
+    const scaleY = this.puzzleCanvas.height / rect.height;
+    return {
+      x: (e.clientX - rect.left) * scaleX,
+      y: (e.clientY - rect.top) * scaleY
+    };
+  }
+
+  handlePuzzlePointerDown(e) {
+    if (this.puzzleCompleted) return;
+    const mouse = this.getPuzzleCanvasMousePos(e);
+
+    let selectedPiece = null;
+    for (let i = this.jigsawPieces.length - 1; i >= 0; i--) {
+      const p = this.jigsawPieces[i];
+      const path = this.createJigsawPiecePath(p);
+      if (this.puzzleCtx.isPointInPath(path, mouse.x, mouse.y)) {
+        selectedPiece = p;
+        break;
+      }
+    }
+
+    if (!selectedPiece) return;
+
+    this.selectedJigsawGroup = this.jigsawPieces.filter(p => p.group === selectedPiece.group);
+    this.dragStartX = mouse.x;
+    this.dragStartY = mouse.y;
+
+    this.originalJigsawPositions = this.selectedJigsawGroup.map(p => ({
+      piece: p,
+      x: p.x,
+      y: p.y
+    }));
+
+    // Bring selected group to front
+    this.jigsawPieces = this.jigsawPieces.filter(p => p.group !== selectedPiece.group);
+    this.jigsawPieces.push(...this.selectedJigsawGroup);
+
+    this.puzzleCanvas.setPointerCapture(e.pointerId);
+    this.drawJigsaw();
+  }
+
+  handlePuzzlePointerMove(e) {
+    if (!this.selectedJigsawGroup) return;
+    const mouse = this.getPuzzleCanvasMousePos(e);
+    const dx = mouse.x - this.dragStartX;
+    const dy = mouse.y - this.dragStartY;
+
+    this.originalJigsawPositions.forEach(item => {
+      item.piece.x = item.x + dx;
+      item.piece.y = item.y + dy;
+    });
+
+    this.drawJigsaw();
+  }
+
+  handlePuzzlePointerUp(e) {
+    if (!this.selectedJigsawGroup) return;
+
+    this.puzzleMovesCount += 1;
+    this.puzzleMoves.textContent = this.puzzleMovesCount;
+
+    this.snapJigsawGroup();
+    this.selectedJigsawGroup = null;
+    this.originalJigsawPositions = [];
+
+    this.drawJigsaw();
+    this.checkJigsawCompleted();
+  }
+
+  snapJigsawGroup() {
+    const ref = this.selectedJigsawGroup[0];
+    const dist = Math.sqrt(Math.pow(ref.x - ref.correctX, 2) + Math.pow(ref.y - ref.correctY, 2));
+    const snapDist = Math.min(this.puzzlePieceWidth, this.puzzlePieceHeight) * 0.45;
+
+    if (dist <= snapDist) {
+      const dx = ref.correctX - ref.x;
+      const dy = ref.correctY - ref.y;
+
+      this.selectedJigsawGroup.forEach(p => {
+        p.x += dx;
+        p.y += dy;
+        p.placed = true;
+      });
+
+      window.voiceEngine.playGentleBeep();
+      this.connectJigsawNeighbors(this.selectedJigsawGroup);
+    }
+  }
+
+  connectJigsawNeighbors(group) {
+    let changed = true;
+    while (changed) {
+      changed = false;
+      for (const piece of group) {
+        const neighbors = [
+          { r: piece.row - 1, c: piece.col },
+          { r: piece.row + 1, c: piece.col },
+          { r: piece.row, c: piece.col - 1 },
+          { r: piece.row, c: piece.col + 1 }
+        ];
+
+        for (const n of neighbors) {
+          if (n.r < 0 || n.r >= this.puzzleRows || n.c < 0 || n.c >= this.puzzleCols) continue;
+          const neighbor = this.jigsawPieces.find(p => p.row === n.r && p.col === n.c);
+          if (neighbor && neighbor.placed && neighbor.group !== piece.group) {
+            const oldGroup = neighbor.group;
+            const newGroup = piece.group;
+            this.jigsawPieces.forEach(p => {
+              if (p.group === oldGroup) p.group = newGroup;
+            });
+            changed = true;
+          }
+        }
+      }
+    }
+  }
+
+  checkJigsawCompleted() {
+    const isSolved = this.jigsawPieces.every(p => {
+      return Math.abs(p.x - p.correctX) < 2 && Math.abs(p.y - p.correctY) < 2;
+    });
+
+    if (!isSolved || this.puzzleCompleted) return;
+
+    this.puzzleCompleted = true;
+    clearInterval(this.puzzleTimerInterval);
+
+    window.voiceEngine.playChimeSuccess();
+    const praise = "Wonderful visuospatial skill! You completed the puzzle!";
+    this.feedbackEmoji.textContent = '🎉';
+    this.feedbackText.textContent = praise;
+    this.feedbackBanner.classList.remove('hidden');
+    window.voiceEngine.speak(praise);
+
+    const completionSec = Math.floor((Date.now() - this.puzzleStartTime) / 1000);
+
+    // Post to server for Clinical Score evaluation
+    fetch('/api/game/submit-answer', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        session_id: this.sessionId,
+        mode: 'jigsaw_puzzle',
+        user_selection: true,
+        target_data: true,
+        response_time_ms: completionSec * 1000
+      })
+    })
+    .then(r => r.json())
+    .then(data => {
+      if (data.clinical_assessment) {
+        this.applyClinicalAssessment(data.clinical_assessment);
+      }
+      this.pointsEarnedBadge.textContent = `+${data.points_earned || 200} pts`;
+    })
+    .catch(err => console.warn("Puzzle submit sync:", err));
+  }
+
+  /* =========================================================
      Clinical Assessment & Doctor Level Engine
      ========================================================= */
 
@@ -964,9 +1514,11 @@ class SimpleMindBloomApp {
       domain_bars: [
         { domain_name: "Object Identification & Naming", score_pct: 95 },
         { domain_name: "Short-Term Delayed Recall", score_pct: 85 },
-        { domain_name: "Working Memory & Executive Function", score_pct: 90 }
+        { domain_name: "Working Memory & Executive Function", score_pct: 90 },
+        { domain_name: "Temporal Orientation & Routine Recall", score_pct: 92 },
+        { domain_name: "Visuospatial & Constructional Ability", score_pct: 88 }
       ],
-      clinical_finding: "Patient demonstrates sharp visual recognition and brisk reaction time (<2.5s). No significant dementia symptoms detected.",
+      clinical_finding: "Patient demonstrates sharp visual recognition and brisk reaction time (<2.5s). Visuospatial and naming domains intact.",
       caregiver_note: "Continue daily 15-minute cognitive stimulation, morning hydration, and light social conversations."
     };
 

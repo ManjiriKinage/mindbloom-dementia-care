@@ -162,6 +162,51 @@
       <!-- Dynamically placed picture cards -->
     </div>
 
+    <!-- ================= SENIOR JIGSAW PUZZLE CONTAINER (Visuospatial Therapy) ================= -->
+    <div class="puzzle-container hidden" id="puzzleContainer">
+      <!-- Picture Selection Bar -->
+      <div class="puzzle-theme-bar">
+        <span class="theme-label">🖼️ Choose Picture:</span>
+        <div class="theme-chips-row">
+          <button class="theme-chip active" data-img="/static/images/tea_garden.jpg" data-name="Assam Tea Garden">🍵 Tea Garden</button>
+          <button class="theme-chip" data-img="/static/images/golden_bell.jpg" data-name="Golden Temple Bell">🛕 Temple Bell</button>
+          <button class="theme-chip" data-img="/static/images/kopou_orchid.jpg" data-name="Kopou Orchid">🌺 Kopou Orchid</button>
+        </div>
+      </div>
+
+      <!-- Puzzle Metrics Info -->
+      <div class="puzzle-info-bar">
+        <div class="p-info-box">
+          <span class="p-lbl">Moves</span>
+          <strong id="puzzleMoves">0</strong>
+        </div>
+        <div class="p-info-box">
+          <span class="p-lbl">Time</span>
+          <strong id="puzzleTimer">00:00</strong>
+        </div>
+        <div class="p-info-box">
+          <span class="p-lbl">Pieces</span>
+          <strong id="puzzlePiecesCount">4</strong>
+        </div>
+        <div class="p-info-box">
+          <span class="p-lbl">Assist Guide</span>
+          <strong id="puzzleGuideStatus" style="color:#059669;">ON</strong>
+        </div>
+      </div>
+
+      <!-- Interactive Canvas Wrapper -->
+      <div class="canvas-wrapper">
+        <canvas id="puzzleCanvas"></canvas>
+      </div>
+
+      <!-- Puzzle Control Buttons -->
+      <div class="puzzle-controls">
+        <button class="p-ctrl-btn" id="puzzleShuffleBtn">🔀 Shuffle Pieces</button>
+        <button class="p-ctrl-btn" id="puzzleHintToggleBtn">💡 Toggle Ghost Outline</button>
+        <button class="p-ctrl-btn" id="puzzleRestartBtn">↻ Restart Puzzle</button>
+      </div>
+    </div>
+
     <!-- Feedback Banner -->
     <div id="feedbackBanner" class="feedback-banner hidden">
       <span class="feedback-emoji" id="feedbackEmoji">🌟</span>
@@ -186,6 +231,7 @@
           <button class="mode-pill" data-mode="memory_recall" id="modeRecall">🧠 Remember (Recall)</button>
           <button class="mode-pill" data-mode="card_match" id="modeMatch">🃏 Match Pairs (Working Memory)</button>
           <button class="mode-pill" data-mode="daily_routine" id="modeRoutine">🌅 Routine (Orientation)</button>
+          <button class="mode-pill" data-mode="jigsaw_puzzle" id="modePuzzle">🧩 Jigsaw (Visuospatial)</button>
         </div>
       </div>
     </div>

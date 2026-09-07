@@ -592,6 +592,146 @@ body {
   border-style: dashed;
 }
 
+/* =========================================================
+   Senior Jigsaw Puzzle (Visuospatial Therapy Module)
+   ========================================================= */
+
+.puzzle-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  width: 100%;
+}
+
+.puzzle-theme-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #ffffff;
+  padding: 0.65rem 1rem;
+  border-radius: 16px;
+  border: 1.5px solid var(--border-bamboo);
+  flex-wrap: wrap;
+}
+
+.theme-label {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--tea-emerald);
+}
+
+.theme-chips-row {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.theme-chip {
+  background: #f8fafc;
+  color: var(--text-main);
+  border: 1.5px solid #cbd5e1;
+  border-radius: 9999px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s ease;
+}
+
+.theme-chip:hover {
+  border-color: var(--tea-green);
+}
+
+.theme-chip.active {
+  background: var(--tea-emerald);
+  color: #ffffff;
+  border-color: var(--tea-emerald);
+  box-shadow: 0 2px 8px rgba(6, 95, 70, 0.25);
+}
+
+.puzzle-info-bar {
+  display: flex;
+  justify-content: space-around;
+  background: #ffffff;
+  padding: 0.65rem;
+  border-radius: 16px;
+  border: 1.5px solid var(--border-bamboo);
+  box-shadow: var(--shadow-soft);
+}
+
+.p-info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p-lbl {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.p-info-box strong {
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: var(--text-dark);
+}
+
+.canvas-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #0f172a;
+  border-radius: 20px;
+  padding: 0.5rem;
+  border: 3px solid var(--border-bamboo);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+#puzzleCanvas {
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  touch-action: none;
+  cursor: grab;
+}
+
+#puzzleCanvas:active {
+  cursor: grabbing;
+}
+
+.puzzle-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+}
+
+.p-ctrl-btn {
+  background: #ffffff;
+  border: 2px solid var(--border-bamboo);
+  padding: 0.6rem 1.1rem;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: var(--text-main);
+  font-family: inherit;
+  transition: all 0.15s ease;
+}
+
+.p-ctrl-btn:active {
+  transform: scale(0.96);
+  background: var(--tea-light);
+  border-color: var(--tea-green);
+}
+
 /* Feedback Banner */
 .feedback-banner {
   background: linear-gradient(135deg, #059669, #047857);
