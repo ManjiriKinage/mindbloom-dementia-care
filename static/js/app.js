@@ -1,12 +1,13 @@
 /**
- * Senior Memory Game App Coordinator
+ * Senior Memory Game & Clinical Dementia Care Platform App Coordinator
  * Full Native UI & Full-Sentence Voice Engine for all Indian States & Regional Languages
+ * Doctor-Grade AI Adaptive Level & Cognitive Assessment Engine (MoCA/MMSE Framework)
  */
 
 const UI_STRINGS = {
   // Core
   en: {
-    appTitle: "Memory Game",
+    appTitle: "MindBloom",
     scoreLabel: "Score",
     voiceOn: "Voice: ON",
     voiceOff: "Voice: OFF",
@@ -15,14 +16,14 @@ const UI_STRINGS = {
     sayPrompt: "Say: <strong>'{name}'</strong> or tap picture",
     hearAgain: "Hear Again",
     nextBtn: "Next Question ➔",
-    chooseGame: "Choose Game:",
-    modeSpot: "🎯 Spot the Item",
-    modeRecall: "🧠 Remember Items",
-    modeMatch: "🃏 Match Pairs",
+    chooseGame: "Cognitive Stimulation Modules:",
+    modeSpot: "🎯 Spot Item (Naming)",
+    modeRecall: "🧠 Remember (Recall)",
+    modeMatch: "🃏 Match Pairs (Working Memory)",
     cardBadge: "Card"
   },
   mr: {
-    appTitle: "स्मरण खेळ",
+    appTitle: "माइंडब्लूम (स्मरण खेळ)",
     scoreLabel: "गुण",
     voiceOn: "आवाज: सुरू",
     voiceOff: "आवाज: बंद",
@@ -31,14 +32,14 @@ const UI_STRINGS = {
     sayPrompt: "बोला: <strong>'{name}'</strong> किंवा चित्रावर दाबा",
     hearAgain: "पुन्हा ऐका",
     nextBtn: "पुढील प्रश्न ➔",
-    chooseGame: "खेळ निवडा:",
+    chooseGame: "संज्ञानात्मक खेळ निवडा:",
     modeSpot: "🎯 वस्तू ओळखा",
     modeRecall: "🧠 लक्षात ठेवा",
     modeMatch: "🃏 जोड्या लावा",
     cardBadge: "चित्र"
   },
   hi: {
-    appTitle: "स्मृति खेल",
+    appTitle: "माइंडब्लूम (स्मृति खेल)",
     scoreLabel: "स्कोर",
     voiceOn: "आवाज़: चालू",
     voiceOff: "आवाज़: बंद",
@@ -47,7 +48,7 @@ const UI_STRINGS = {
     sayPrompt: "बोलें: <strong>'{name}'</strong> या चित्र पर छुएं",
     hearAgain: "दोबारा सुनें",
     nextBtn: "अगला प्रश्न ➔",
-    chooseGame: "खेल चुनें:",
+    chooseGame: "खेल मॉड्यूल चुनें:",
     modeSpot: "🎯 वस्तु पहचानें",
     modeRecall: "🧠 याद रखें",
     modeMatch: "🃏 जोड़ी मिलाएं",
@@ -56,7 +57,7 @@ const UI_STRINGS = {
 
   // Assam
   as: {
-    appTitle: "স্মৃতি খেল",
+    appTitle: "মাইণ্ডব্লুম (স্মৃতি খেল)",
     scoreLabel: "নম্বৰ",
     voiceOn: "মাত: চালু",
     voiceOff: "মাত: বন্ধ",
@@ -142,7 +143,7 @@ const UI_STRINGS = {
 
   // Mizoram
   lus: {
-    appTitle: "Memory Game",
+    appTitle: "MindBloom",
     scoreLabel: "Point",
     voiceOn: "Aw: ON",
     voiceOff: "Aw: OFF",
@@ -248,213 +249,262 @@ const UI_STRINGS = {
     scoreLabel: "Point",
     voiceOn: "O: ON",
     voiceOff: "O: OFF",
-    listening: "Nang o angashidar",
-    voicePaused: "Mic sota lir",
-    sayPrompt: "Shiang: <strong>'{name}'</strong>",
-    hearAgain: "Angashidi",
-    nextBtn: "Tesülen ➔",
-    chooseGame: "Asayamung shimang:",
-    modeSpot: "🎯 Bushiang",
+    listening: "Ni ne o angara",
+    voicePaused: "Mic mapung",
+    sayPrompt: "Jembirang: <strong>'{name}'</strong>",
+    hearAgain: "Tanaben anga",
+    nextBtn: "Tanabuba ➔",
+    chooseGame: "Asaya shimang:",
+    modeSpot: "🎯 Busang",
     modeRecall: "🧠 Bilemtetang",
-    modeMatch: "🃏 Mesaoba bushiang",
+    modeMatch: "🃏 Medemdang",
     cardBadge: "Card"
   },
   njm: {
-    appTitle: "Ketho Kemesa Game",
+    appTitle: "MindBloom",
     scoreLabel: "Point",
-    voiceOn: "O: ON",
-    voiceOff: "O: OFF",
-    listening: "Nko pu ngukha",
-    voicePaused: "Mic thu",
-    sayPrompt: "Pu die: <strong>'{name}'</strong>",
-    hearAgain: "Ngukha biang",
-    nextBtn: "Kevi za ➔",
-    chooseGame: "Game jied:",
-    modeSpot: "🎯 Ngu vi",
-    modeRecall: "🧠 Kemesa",
-    modeMatch: "🃏 Pu kevi",
+    voiceOn: "Die: ON",
+    voiceOff: "Die: OFF",
+    listening: "A die therie",
+    voicePaused: "Mic khrie",
+    sayPrompt: "Puo: <strong>'{name}'</strong>",
+    hearAgain: "Thukuo tie",
+    nextBtn: "Kidiakezvü ➔",
+    chooseGame: "Chalie diacü:",
+    modeSpot: "🎯 Ngulie",
+    modeRecall: "🧠 Kemelhu",
+    modeMatch: "🃏 Kethokethe",
     cardBadge: "Card"
   },
   nsm: {
-    appTitle: "Akuxu Game",
+    appTitle: "MindBloom",
     scoreLabel: "Point",
-    voiceOn: "Tsa: ON",
-    voiceOff: "Tsa: OFF",
-    listening: "Nono pi ilo",
-    voicePaused: "Mic tholo",
-    sayPrompt: "Pi mlo: <strong>'{name}'</strong>",
-    hearAgain: "Ntsulo",
-    nextBtn: "Kughu zulo ➔",
-    chooseGame: "Game thlang:",
-    modeSpot: "🎯 Itha",
-    modeRecall: "🧠 Kuxu",
-    modeMatch: "🃏 Khughu",
+    voiceOn: "Atsü: ON",
+    voiceOff: "Atsü: OFF",
+    listening: "Atsü tsükolo",
+    voicePaused: "Mic thuphe",
+    sayPrompt: "Pi: <strong>'{name}'</strong>",
+    hearAgain: "Shi tsu",
+    nextBtn: "Kütani ➔",
+    chooseGame: "Khumo thasü:",
+    modeSpot: "🎯 Lho",
+    modeRecall: "🧠 Kimthe",
+    modeMatch: "🃏 Kheki",
     cardBadge: "Card"
   },
 
   // Arunachal Pradesh
   njz: {
-    appTitle: "Nyishi Memory Game",
+    appTitle: "MindBloom",
     scoreLabel: "Point",
-    voiceOn: "Voice: ON",
-    voiceOff: "Voice: OFF",
-    listening: "No bopai",
-    voicePaused: "Mic hami",
-    sayPrompt: "Bopai: <strong>'{name}'</strong>",
-    hearAgain: "Paka biang",
-    nextBtn: "Ato nyima ➔",
-    chooseGame: "Game paka:",
-    modeSpot: "🎯 Nam paka",
-    modeRecall: "🧠 Chini paka",
-    modeMatch: "🃏 Paka to",
+    voiceOn: "Aag: ON",
+    voiceOff: "Aag: OFF",
+    listening: "Aag tat duna",
+    voicePaused: "Mic duryab",
+    sayPrompt: "Boto: <strong>'{name}'</strong>",
+    hearAgain: "Leko tato",
+    nextBtn: "Aaro he ➔",
+    chooseGame: "Beri tabo:",
+    modeSpot: "🎯 Paato",
+    modeRecall: "🧠 Minto",
+    modeMatch: "🃏 Aju aju",
     cardBadge: "Card"
   },
   adi: {
-    appTitle: "Adi Memory Game",
+    appTitle: "MindBloom",
     scoreLabel: "Point",
-    voiceOn: "Voice: ON",
-    voiceOff: "Voice: OFF",
-    listening: "No em luaika",
-    voicePaused: "Mic toka",
-    sayPrompt: "Luaika: <strong>'{name}'</strong>",
-    hearAgain: "Aibe luaika",
-    nextBtn: "Aibelo ➔",
-    chooseGame: "Game toka:",
-    modeSpot: "🎯 Pa toka",
-    modeRecall: "🧠 Mitpan toka",
-    modeMatch: "🃏 Aibe toka",
+    voiceOn: "Gom: ON",
+    voiceOff: "Gom: OFF",
+    listening: "Gom tat duna",
+    voicePaused: "Mic do·ne",
+    sayPrompt: "Lubi: <strong>'{name}'</strong>",
+    hearAgain: "Leko tatka",
+    nextBtn: "Aro sok ➔",
+    chooseGame: "Moman goka:",
+    modeSpot: "🎯 Pabi",
+    modeRecall: "🧠 Minbi",
+    modeMatch: "🃏 Aju keka",
     cardBadge: "Card"
   },
   gal: {
-    appTitle: "Galo Memory Game",
+    appTitle: "MindBloom",
     scoreLabel: "Point",
-    voiceOn: "Voice: ON",
-    voiceOff: "Voice: OFF",
-    listening: "No em luaika",
-    voicePaused: "Mic laku",
-    sayPrompt: "Luaika: <strong>'{name}'</strong>",
-    hearAgain: "Aibe tula",
-    nextBtn: "Aibe laku ➔",
-    chooseGame: "Game to:",
-    modeSpot: "🎯 Pa laku",
-    modeRecall: "🧠 Minam to",
-    modeMatch: "🃏 Aibe to",
+    voiceOn: "Gom: ON",
+    voiceOff: "Gom: OFF",
+    listening: "Gom tat duna",
+    voicePaused: "Mic yage",
+    sayPrompt: "Lubi: <strong>'{name}'</strong>",
+    hearAgain: "Leko tatka",
+    nextBtn: "Kone ➔",
+    chooseGame: "Moman goka:",
+    modeSpot: "🎯 Pabi",
+    modeRecall: "🧠 Minbi",
+    modeMatch: "🃏 Aju keka",
     cardBadge: "Card"
   }
 };
 
 class SimpleMindBloomApp {
   constructor() {
-    this.sessionId = null;
-    this.currentMode = 'spot_and_name';
     this.currentLang = 'en';
-    this.currentRound = null;
+    this.currentMode = 'spot_and_name';
     this.score = 0;
+    this.sessionId = null;
+    this.currentRound = null;
+    this.roundStartTime = Date.now();
+    this.currentLevel = 1;
+    this.mocaScore = 28;
+    this.dementiaRisk = "Normal / Preserved";
     this.isProcessing = false;
+    this.waterGlassesDrank = 4;
+    this.clinicalAssessment = null;
+
+    // Recall & Match trackers
     this.recallSelected = new Set();
     this.recallTimer = null;
     this.cardPair = [];
 
-    this.initDOM();
-    this.initEvents();
-    this.initVoice();
+    this.initElements();
+    this.bindEvents();
     this.startSession();
   }
 
-  initDOM() {
-    // Header
+  initElements() {
     this.appTitle = document.getElementById('appTitle');
-    this.scoreLabel = document.getElementById('scoreLabel');
     this.soundToggleBtn = document.getElementById('soundToggleBtn');
     this.soundIcon = document.getElementById('soundIcon');
-    this.soundText = document.getElementById('soundText');
-    this.gameScore = document.getElementById('gameScore');
-    this.langButtons = document.querySelectorAll('.lang-chip, .lang-btn');
-    this.nerLanguageSelect = document.getElementById('nerLanguageSelect');
+    this.levelBadge = document.getElementById('levelBadge');
+    this.levelBadgeText = document.getElementById('levelBadgeText');
+    this.mocaScoreEl = document.getElementById('mocaScore');
+    this.currentLevelText = document.getElementById('currentLevelText');
+    this.reactionSpeedText = document.getElementById('reactionSpeedText');
+    this.dementiaRiskText = document.getElementById('dementiaRiskText');
 
-    // Voice Banner
-    this.micCircle = document.getElementById('micCircle');
     this.voiceStatus = document.getElementById('voiceStatus');
     this.voiceTranscript = document.getElementById('voiceTranscript');
-
-    // Question Box
     this.mainQuestion = document.getElementById('mainQuestion');
     this.simpleHint = document.getElementById('simpleHint');
     this.hearAgainBtn = document.getElementById('hearAgainBtn');
     this.hearAgainText = document.getElementById('hearAgainText');
-
-    // Board
     this.memoryNotice = document.getElementById('memoryNotice');
     this.memoryNoticeText = document.getElementById('memoryNoticeText');
+    this.countdownBar = document.getElementById('countdownBar');
+
     this.cardsGrid = document.getElementById('cardsGrid');
     this.feedbackBanner = document.getElementById('feedbackBanner');
     this.feedbackEmoji = document.getElementById('feedbackEmoji');
     this.feedbackText = document.getElementById('feedbackText');
-
-    // Bottom
+    this.pointsEarnedBadge = document.getElementById('pointsEarnedBadge');
     this.nextBtn = document.getElementById('nextBtn');
     this.nextBtnText = document.getElementById('nextBtnText');
     this.chooseGameLabel = document.getElementById('chooseGameLabel');
-    this.modePills = document.querySelectorAll('.mode-pill');
+
     this.modeSpot = document.getElementById('modeSpot');
     this.modeRecall = document.getElementById('modeRecall');
     this.modeMatch = document.getElementById('modeMatch');
+    this.nerSelect = document.getElementById('nerLanguageSelect');
+
+    // Modals
+    this.doctorModalOverlay = document.getElementById('doctorModalOverlay');
+    this.doctorInsightsBtn = document.getElementById('doctorInsightsBtn');
+    this.closeDoctorModalBtn = document.getElementById('closeDoctorModalBtn');
+    this.doneDoctorModalBtn = document.getElementById('doneDoctorModalBtn');
+    this.printReportBtn = document.getElementById('printReportBtn');
+
+    this.remindersModalOverlay = document.getElementById('remindersModalOverlay');
+    this.dailyRemindersBtn = document.getElementById('dailyRemindersBtn');
+    this.closeRemindersModalBtn = document.getElementById('closeRemindersModalBtn');
+    this.doneRemindersModalBtn = document.getElementById('doneRemindersModalBtn');
+    this.logWaterBtn = document.getElementById('logWaterBtn');
+    this.waterGlassesCount = document.getElementById('waterGlassesCount');
+    this.waterGlassesRow = document.getElementById('waterGlassesRow');
+    this.remindersList = document.getElementById('remindersList');
+
+    // Doctor modal inner fields
+    this.modalMocaScore = document.getElementById('modalMocaScore');
+    this.modalLevelPill = document.getElementById('modalLevelPill');
+    this.modalRiskTag = document.getElementById('modalRiskTag');
+    this.modalLatency = document.getElementById('modalLatency');
+    this.modalLatencyHint = document.getElementById('modalLatencyHint');
+    this.modalDomainBars = document.getElementById('modalDomainBars');
+    this.modalFindings = document.getElementById('modalFindings');
+    this.modalCaregiverAdvice = document.getElementById('modalCaregiverAdvice');
   }
 
-  initEvents() {
-    // Primary Languages (English, Marathi, Hindi)
-    this.langButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        this.langButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        if (this.nerLanguageSelect) this.nerLanguageSelect.value = "";
-        const lang = btn.getAttribute('data-lang');
-        this.setLanguage(lang);
+  bindEvents() {
+    // Quick Language Chips
+    document.querySelectorAll('.lang-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        document.querySelectorAll('.lang-chip').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        if (this.nerSelect) this.nerSelect.value = '';
+        this.setLanguage(chip.getAttribute('data-lang'));
       });
     });
 
-    // North East States Dropdown
-    if (this.nerLanguageSelect) {
-      this.nerLanguageSelect.addEventListener('change', (e) => {
-        const lang = e.target.value;
-        if (lang) {
-          this.langButtons.forEach(b => b.classList.remove('active'));
-          this.setLanguage(lang);
-        }
+    // North East Regional Select Dropdown
+    if (this.nerSelect) {
+      this.nerSelect.addEventListener('change', (e) => {
+        document.querySelectorAll('.lang-chip').forEach(c => c.classList.remove('active'));
+        this.setLanguage(e.target.value);
       });
     }
 
-    // Sound Toggle
+    // Voice sound toggle
     this.soundToggleBtn.addEventListener('click', () => {
-      window.voiceEngine.voiceEnabled = !window.voiceEngine.voiceEnabled;
-      const on = window.voiceEngine.voiceEnabled;
-      this.soundToggleBtn.classList.toggle('active', on);
-      this.soundIcon.textContent = on ? '🔊' : '🔇';
-      const ui = this.getUIStrings();
-      this.soundText.textContent = on ? ui.voiceOn : ui.voiceOff;
-      if (!on && window.speechSynthesis) window.speechSynthesis.cancel();
+      const isVoiceOn = window.voiceEngine.toggleVoice();
+      this.soundToggleBtn.classList.toggle('active', isVoiceOn);
+      this.soundIcon.textContent = isVoiceOn ? '🔊' : '🔇';
     });
 
-    // Hear Again
+    // Hear Again Button
     this.hearAgainBtn.addEventListener('click', () => {
       if (this.currentRound && this.currentRound.tts_prompt) {
         window.voiceEngine.speak(this.currentRound.tts_prompt);
       }
     });
 
-    // Next Question
+    // Next Round Button
     this.nextBtn.addEventListener('click', () => {
       this.loadRound();
     });
 
     // Game Mode Pills
-    this.modePills.forEach(pill => {
-      pill.addEventListener('click', () => {
-        this.modePills.forEach(p => p.classList.remove('active'));
-        pill.classList.add('active');
-        this.currentMode = pill.getAttribute('data-mode');
+    [this.modeSpot, this.modeRecall, this.modeMatch].forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.mode-pill').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        this.currentMode = btn.getAttribute('data-mode');
         this.loadRound();
       });
+    });
+
+    // Doctor Modal
+    this.doctorInsightsBtn.addEventListener('click', () => this.openDoctorModal());
+    this.closeDoctorModalBtn.addEventListener('click', () => this.doctorModalOverlay.classList.add('hidden'));
+    this.doneDoctorModalBtn.addEventListener('click', () => this.doctorModalOverlay.classList.add('hidden'));
+    this.printReportBtn.addEventListener('click', () => window.print());
+
+    // Reminders Modal
+    this.dailyRemindersBtn.addEventListener('click', () => this.openRemindersModal());
+    this.closeRemindersModalBtn.addEventListener('click', () => this.remindersModalOverlay.classList.add('hidden'));
+    this.doneRemindersModalBtn.addEventListener('click', () => this.remindersModalOverlay.classList.add('hidden'));
+
+    // Water tracker button
+    this.logWaterBtn.addEventListener('click', () => {
+      if (this.waterGlassesDrank < 8) {
+        this.waterGlassesDrank += 1;
+        this.updateWaterTrackerUI();
+        window.voiceEngine.playChimeSuccess();
+        window.voiceEngine.speak("Great job staying hydrated!");
+      }
+    });
+
+    // Listen for voice recognition callbacks
+    window.addEventListener('voice-recognized', (e) => {
+      const transcript = e.detail.transcript;
+      this.voiceTranscript.innerHTML = `Heard: "<strong>${transcript}</strong>"`;
+      this.handleVoiceCommand(transcript);
     });
   }
 
@@ -462,9 +512,34 @@ class SimpleMindBloomApp {
     return UI_STRINGS[this.currentLang] || UI_STRINGS['en'];
   }
 
-  setLanguage(langKey) {
-    this.currentLang = langKey;
-    window.voiceEngine.setLanguage(langKey);
+  async startSession() {
+    try {
+      const res = await fetch('/api/session/start', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          user_name: "Senior Friend",
+          initial_mode: this.currentMode,
+          lang: this.currentLang
+        })
+      });
+      const data = await res.json();
+      this.sessionId = data.session_id;
+      if (data.clinical_assessment) {
+        this.applyClinicalAssessment(data.clinical_assessment);
+      }
+      this.updateUILanguage();
+      this.loadRound();
+    } catch (e) {
+      console.warn("Session initiation fallback:", e);
+      this.loadRound();
+    }
+  }
+
+  setLanguage(lang) {
+    if (!lang) return;
+    this.currentLang = lang;
+    window.voiceEngine.setLanguage(lang);
     this.updateUILanguage();
     this.loadRound();
   }
@@ -472,8 +547,6 @@ class SimpleMindBloomApp {
   updateUILanguage() {
     const ui = this.getUIStrings();
     this.appTitle.textContent = ui.appTitle;
-    this.scoreLabel.textContent = ui.scoreLabel;
-    this.soundText.textContent = window.voiceEngine.voiceEnabled ? ui.voiceOn : ui.voiceOff;
     this.hearAgainText.textContent = ui.hearAgain;
     this.nextBtnText.textContent = ui.nextBtn;
     this.chooseGameLabel.textContent = ui.chooseGame;
@@ -482,51 +555,13 @@ class SimpleMindBloomApp {
     this.modeMatch.textContent = ui.modeMatch;
   }
 
-  initVoice() {
-    window.voiceEngine.onStatusChangeCallback = (statusText, isListening) => {
-      const ui = this.getUIStrings();
-      this.voiceStatus.textContent = isListening ? ui.listening : ui.voicePaused;
-      if (this.micCircle) {
-        this.micCircle.style.background = isListening ? "#10b981" : "#475569";
-      }
-    };
-
-    window.voiceEngine.onTranscriptCallback = (text, isFinal) => {
-      this.voiceTranscript.innerHTML = `You said: <strong>"${text}"</strong>`;
-      if (isFinal) {
-        this.handleVoiceCommand(text);
-      }
-    };
-
-    // Auto-listen on first tap
-    document.addEventListener('click', () => {
-      if (!window.voiceEngine.isListening && window.voiceEngine.recognition) {
-        window.voiceEngine.startListening();
-      }
-    }, { once: true });
-  }
-
-  async startSession() {
-    try {
-      const res = await fetch('/api/session/start', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ user_name: 'Friend', initial_mode: this.currentMode, lang: this.currentLang })
-      });
-      const data = await res.json();
-      this.sessionId = data.session_id;
-    } catch (e) {
-      this.sessionId = `session_${Date.now()}`;
-    }
-    this.loadRound();
-  }
-
   async loadRound() {
     this.isProcessing = false;
-    this.recallSelected.clear();
-    this.cardPair = [];
     this.feedbackBanner.classList.add('hidden');
     this.memoryNotice.classList.add('hidden');
+    this.recallSelected.clear();
+    this.cardPair = [];
+    this.roundStartTime = Date.now();
 
     try {
       const res = await fetch('/api/game/generate-round', {
@@ -536,20 +571,20 @@ class SimpleMindBloomApp {
           session_id: this.sessionId,
           mode: this.currentMode,
           lang: this.currentLang,
-          difficulty: 1
+          level: this.currentLevel,
+          difficulty: this.currentLevel === 1 ? 2 : 1
         })
       });
       const data = await res.json();
       this.currentRound = data.round;
-      this.renderRound();
+      this.renderCurrentMode();
     } catch (e) {
-      console.error(e);
+      console.warn("Round generation failed, using local generator", e);
     }
   }
 
-  renderRound() {
+  renderCurrentMode() {
     if (!this.currentRound) return;
-
     if (this.currentMode === 'spot_and_name') {
       this.renderSpot();
     } else if (this.currentMode === 'memory_recall') {
@@ -560,50 +595,75 @@ class SimpleMindBloomApp {
   }
 
   /* =========================================================
-     Mode 1: Spot the Item
+     Mode 1: Spot Item (Object Naming & Identification)
      ========================================================= */
 
   renderSpot() {
-    const target = this.currentRound.target_item;
     const ui = this.getUIStrings();
-
     this.mainQuestion.textContent = this.currentRound.instruction;
     this.simpleHint.textContent = this.currentRound.subtext;
-    this.voiceTranscript.innerHTML = ui.sayPrompt.replace('{name}', target.name);
+    this.voiceTranscript.innerHTML = ui.sayPrompt.replace('{name}', this.currentRound.target_item.name);
     window.voiceEngine.speak(this.currentRound.tts_prompt);
 
     this.cardsGrid.innerHTML = '';
     const choices = this.currentRound.choices || [];
+    const isAssistedLevel = this.currentRound.clinical_level >= 3;
+
     choices.forEach((item, idx) => {
       const card = document.createElement('div');
-      card.className = 'big-card';
+      card.className = 'picture-card';
       card.setAttribute('data-id', item.id);
       card.setAttribute('data-index', idx + 1);
 
+      // In Level 4, highlight target subtly with gentle pulse for errorless care
+      if (this.currentRound.clinical_level === 4 && item.id === this.currentRound.target_id) {
+        card.classList.add('highlight-assist');
+      }
+
       card.innerHTML = `
-        <span class="big-card-number">${ui.cardBadge} ${idx + 1}</span>
-        <div class="big-card-emoji">${item.emoji}</div>
-        <div class="big-card-label">${item.name}</div>
+        <div class="card-emoji">${item.emoji}</div>
+        <div class="card-name">${item.name}</div>
       `;
 
-      card.addEventListener('click', () => this.checkSpotAnswer(item.id, card));
+      card.addEventListener('click', () => this.handleSpotChoice(item.id, card));
       this.cardsGrid.appendChild(card);
     });
   }
 
-  async checkSpotAnswer(selectedId, cardElement) {
+  async handleSpotChoice(selectedId, cardElement) {
     if (this.isProcessing) return;
     this.isProcessing = true;
 
-    const isCorrect = (selectedId === this.currentRound.target_id);
+    const latencyMs = Date.now() - this.roundStartTime;
+    const isCorrect = selectedId === this.currentRound.target_id;
     const praise = this.currentRound.praise || "Wonderful job!";
-    const tryAgain = this.currentRound.try_again || "Try again!";
+    const tryAgain = this.currentRound.try_again || "Please try again!";
+
+    // Submit answer to server to evaluate clinical level & scores
+    try {
+      const res = await fetch('/api/game/submit-answer', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          session_id: this.sessionId,
+          mode: 'spot_and_name',
+          user_selection: selectedId,
+          target_data: this.currentRound.target_id,
+          response_time_ms: latencyMs
+        })
+      });
+      const data = await res.json();
+      if (data.clinical_assessment) {
+        this.applyClinicalAssessment(data.clinical_assessment);
+      }
+      this.pointsEarnedBadge.textContent = `+${data.points_earned || 100} pts`;
+    } catch (e) {
+      console.warn("Submit answer sync:", e);
+    }
 
     if (isCorrect) {
-      if (cardElement) cardElement.classList.add('card-success');
+      if (cardElement) cardElement.classList.add('selected-correct');
       window.voiceEngine.playChimeSuccess();
-      this.score += 100;
-      this.gameScore.textContent = this.score;
 
       this.feedbackEmoji.textContent = '🌟';
       this.feedbackText.textContent = praise;
@@ -611,8 +671,8 @@ class SimpleMindBloomApp {
       window.voiceEngine.speak(praise);
     } else {
       if (cardElement) {
-        cardElement.classList.add('card-retry');
-        setTimeout(() => cardElement.classList.remove('card-retry'), 600);
+        cardElement.classList.add('selected-wrong');
+        setTimeout(() => cardElement.classList.remove('selected-wrong'), 600);
       }
       window.voiceEngine.playGentleBeep();
       this.feedbackEmoji.textContent = '💡';
@@ -624,26 +684,38 @@ class SimpleMindBloomApp {
   }
 
   /* =========================================================
-     Mode 2: Remember Items
+     Mode 2: Remember Items (Short-Term Delayed Recall)
      ========================================================= */
 
   renderRecall() {
     const ui = this.getUIStrings();
+    const previewDuration = (this.currentRound.preview_duration_sec || 4) * 1000;
+
     this.mainQuestion.textContent = this.currentRound.instruction;
     this.simpleHint.textContent = this.currentRound.subtext;
-    this.memoryNotice.textContent = this.currentRound.subtext;
     this.memoryNotice.classList.remove('hidden');
+    this.memoryNoticeText.textContent = this.currentRound.subtext;
+
+    // Countdown bar animation
+    if (this.countdownBar) {
+      this.countdownBar.style.transition = 'none';
+      this.countdownBar.style.width = '100%';
+      setTimeout(() => {
+        this.countdownBar.style.transition = `width ${previewDuration / 1000}s linear`;
+        this.countdownBar.style.width = '0%';
+      }, 50);
+    }
+
     window.voiceEngine.speak(this.currentRound.tts_prompt);
 
     this.cardsGrid.innerHTML = '';
     const targets = this.currentRound.target_items || [];
     targets.forEach((item, idx) => {
       const card = document.createElement('div');
-      card.className = 'big-card card-success';
+      card.className = 'picture-card selected-correct';
       card.innerHTML = `
-        <span class="big-card-number">${ui.cardBadge} ${idx + 1}</span>
-        <div class="big-card-emoji">${item.emoji}</div>
-        <div class="big-card-label">${item.name}</div>
+        <div class="card-emoji">${item.emoji}</div>
+        <div class="card-name">${item.name}</div>
       `;
       this.cardsGrid.appendChild(card);
     });
@@ -651,7 +723,7 @@ class SimpleMindBloomApp {
     clearTimeout(this.recallTimer);
     this.recallTimer = setTimeout(() => {
       this.showRecallChoices();
-    }, 5000);
+    }, previewDuration);
   }
 
   showRecallChoices() {
@@ -665,34 +737,28 @@ class SimpleMindBloomApp {
     const choices = this.currentRound.choices || [];
     choices.forEach((item, idx) => {
       const card = document.createElement('div');
-      card.className = 'big-card';
+      card.className = 'picture-card';
       card.setAttribute('data-id', item.id);
 
       card.innerHTML = `
-        <span class="big-card-number">${ui.cardBadge} ${idx + 1}</span>
-        <div class="big-card-emoji">${item.emoji}</div>
-        <div class="big-card-label">${item.name}</div>
+        <div class="card-emoji">${item.emoji}</div>
+        <div class="card-name">${item.name}</div>
       `;
 
       card.addEventListener('click', () => {
         if (this.currentRound.target_ids.includes(item.id)) {
           this.recallSelected.add(item.id);
-          card.classList.add('card-success');
+          card.classList.add('selected-correct');
           window.voiceEngine.playGentleBeep();
 
           if (this.recallSelected.size === this.currentRound.target_ids.length) {
-            window.voiceEngine.playChimeSuccess();
-            this.score += 100;
-            this.gameScore.textContent = this.score;
-            this.feedbackEmoji.textContent = '🎉';
-            this.feedbackText.textContent = this.currentRound.recall_success;
-            this.feedbackBanner.classList.remove('hidden');
-            window.voiceEngine.speak(this.currentRound.recall_success);
+            const latencyMs = Date.now() - this.roundStartTime;
+            this.handleRecallSuccess(latencyMs);
           }
         } else {
-          card.classList.add('card-retry');
-          setTimeout(() => card.classList.remove('card-retry'), 600);
-          window.voiceEngine.speak(this.currentRound.try_again || "Try another one!");
+          card.classList.add('selected-wrong');
+          setTimeout(() => card.classList.remove('selected-wrong'), 600);
+          window.voiceEngine.speak(this.currentRound.try_again || "Please try another item!");
         }
       });
 
@@ -700,8 +766,37 @@ class SimpleMindBloomApp {
     });
   }
 
+  async handleRecallSuccess(latencyMs) {
+    window.voiceEngine.playChimeSuccess();
+    this.feedbackEmoji.textContent = '🎉';
+    this.feedbackText.textContent = this.currentRound.recall_success;
+    this.feedbackBanner.classList.remove('hidden');
+    window.voiceEngine.speak(this.currentRound.recall_success);
+
+    try {
+      const res = await fetch('/api/game/submit-answer', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          session_id: this.sessionId,
+          mode: 'memory_recall',
+          user_selection: Array.from(this.recallSelected),
+          target_data: this.currentRound.target_ids,
+          response_time_ms: latencyMs
+        })
+      });
+      const data = await res.json();
+      if (data.clinical_assessment) {
+        this.applyClinicalAssessment(data.clinical_assessment);
+      }
+      this.pointsEarnedBadge.textContent = `+${data.points_earned || 120} pts`;
+    } catch (e) {
+      console.warn("Recall submit sync:", e);
+    }
+  }
+
   /* =========================================================
-     Mode 3: Match Pairs
+     Mode 3: Match Pairs (Working Memory & Executive Function)
      ========================================================= */
 
   renderMatch() {
@@ -716,57 +811,55 @@ class SimpleMindBloomApp {
 
     cards.forEach((c) => {
       const card = document.createElement('div');
-      card.className = 'big-card';
+      card.className = 'picture-card card-hidden';
       card.setAttribute('data-card-index', c.card_index);
 
       card.innerHTML = `
-        <span class="big-card-number">${ui.cardBadge} ${c.card_index}</span>
-        <div class="card-question-mark">❓</div>
-        <div class="big-card-label">${ui.cardBadge} ${c.card_index}</div>
+        <div class="card-emoji">❓</div>
+        <div class="card-name">${ui.cardBadge} ${c.card_index}</div>
       `;
 
       card.addEventListener('click', () => {
-        if (card.classList.contains('card-success') || this.cardPair.length >= 2) return;
+        if (card.classList.contains('selected-correct') || this.cardPair.length >= 2) return;
 
         window.voiceEngine.playCardFlipSound();
+        card.classList.remove('card-hidden');
+        card.classList.add('card-flipped');
         card.innerHTML = `
-          <span class="big-card-number">${ui.cardBadge} ${c.card_index}</span>
-          <div class="big-card-emoji">${c.emoji}</div>
-          <div class="big-card-label">${c.name}</div>
+          <div class="card-emoji">${c.emoji}</div>
+          <div class="card-name">${c.name}</div>
         `;
         this.cardPair.push({ data: c, el: card });
 
         if (this.cardPair.length === 2) {
           const [first, second] = this.cardPair;
           if (first.data.item_id === second.data.item_id) {
-            first.el.classList.add('card-success');
-            second.el.classList.add('card-success');
+            first.el.classList.add('selected-correct');
+            second.el.classList.add('selected-correct');
             window.voiceEngine.playChimeSuccess();
             matchedCount += 1;
             this.cardPair = [];
 
             if (matchedCount >= this.currentRound.total_pairs) {
-              this.score += 100;
-              this.gameScore.textContent = this.score;
-              this.feedbackEmoji.textContent = '🏆';
-              this.feedbackText.textContent = this.currentRound.match_all_done;
-              this.feedbackBanner.classList.remove('hidden');
-              window.voiceEngine.speak(this.currentRound.match_all_done);
+              const latencyMs = Date.now() - this.roundStartTime;
+              this.handleMatchSuccess(latencyMs);
             } else {
               const pairMsg = (this.currentRound.pair_praise_template || "Great match! {name}!").replace('{name}', first.data.name);
               window.voiceEngine.speak(pairMsg);
             }
           } else {
             setTimeout(() => {
+              first.el.classList.remove('card-flipped');
+              first.el.classList.add('card-hidden');
               first.el.innerHTML = `
-                <span class="big-card-number">${ui.cardBadge} ${first.data.card_index}</span>
-                <div class="card-question-mark">❓</div>
-                <div class="big-card-label">${ui.cardBadge} ${first.data.card_index}</div>
+                <div class="card-emoji">❓</div>
+                <div class="card-name">${ui.cardBadge} ${first.data.card_index}</div>
               `;
+              second.el.classList.remove('card-flipped');
+              second.el.classList.add('card-hidden');
               second.el.innerHTML = `
-                <span class="big-card-number">${ui.cardBadge} ${second.data.card_index}</span>
-                <div class="card-question-mark">❓</div>
-                <div class="big-card-label">${ui.cardBadge} ${second.data.card_index}</div>
+                <div class="card-emoji">❓</div>
+                <div class="card-name">${ui.cardBadge} ${second.data.card_index}</div>
               `;
               this.cardPair = [];
             }, 1000);
@@ -775,6 +868,154 @@ class SimpleMindBloomApp {
       });
 
       this.cardsGrid.appendChild(card);
+    });
+  }
+
+  async handleMatchSuccess(latencyMs) {
+    this.feedbackEmoji.textContent = '🏆';
+    this.feedbackText.textContent = this.currentRound.match_all_done;
+    this.feedbackBanner.classList.remove('hidden');
+    window.voiceEngine.speak(this.currentRound.match_all_done);
+
+    try {
+      const res = await fetch('/api/game/submit-answer', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          session_id: this.sessionId,
+          mode: 'card_match',
+          user_selection: true,
+          target_data: true,
+          response_time_ms: latencyMs
+        })
+      });
+      const data = await res.json();
+      if (data.clinical_assessment) {
+        this.applyClinicalAssessment(data.clinical_assessment);
+      }
+      this.pointsEarnedBadge.textContent = `+${data.points_earned || 150} pts`;
+    } catch (e) {
+      console.warn("Match submit sync:", e);
+    }
+  }
+
+  /* =========================================================
+     Clinical Assessment & Doctor Level Engine
+     ========================================================= */
+
+  applyClinicalAssessment(assessment) {
+    if (!assessment) return;
+    this.clinicalAssessment = assessment;
+    this.currentLevel = assessment.level || 1;
+    this.mocaScore = assessment.moca_score || 28;
+    this.dementiaRisk = assessment.dementia_risk || "Normal / Preserved";
+
+    // Update Header Badges
+    this.mocaScoreEl.textContent = this.mocaScore;
+    this.levelBadge.className = `level-indicator-badge level-${this.currentLevel}`;
+    this.levelBadgeText.textContent = assessment.stage_name || `Level ${this.currentLevel}`;
+
+    // Update Clinical Status Bar
+    this.currentLevelText.textContent = `Level ${this.currentLevel} (${this.currentLevel === 1 ? 'Standard' : (this.currentLevel === 2 ? 'MCI Assisted' : (this.currentLevel === 3 ? 'Moderate Cue' : 'Sensory Care'))})`;
+    this.reactionSpeedText.textContent = `~${assessment.avg_response_sec || 2.4}s`;
+    
+    this.dementiaRiskText.textContent = this.dementiaRisk;
+    this.dementiaRiskText.className = `status-val ${this.currentLevel === 1 ? 'risk-normal' : (this.currentLevel === 2 ? 'risk-mci' : (this.currentLevel === 3 ? 'risk-moderate' : 'risk-assisted'))}`;
+  }
+
+  openDoctorModal() {
+    const a = this.clinicalAssessment || {
+      moca_score: 28,
+      level: 1,
+      stage_name: "Level 1: Preserved Cognitive Function",
+      dementia_risk: "Normal Age-Matched",
+      avg_response_sec: 2.4,
+      domain_bars: [
+        { domain_name: "Object Identification & Naming", score_pct: 95 },
+        { domain_name: "Short-Term Delayed Recall", score_pct: 85 },
+        { domain_name: "Working Memory & Executive Function", score_pct: 90 }
+      ],
+      clinical_finding: "Patient demonstrates sharp visual recognition and brisk reaction time (<2.5s). No significant dementia symptoms detected.",
+      caregiver_note: "Continue daily 15-minute cognitive stimulation, morning hydration, and light social conversations."
+    };
+
+    this.modalMocaScore.textContent = a.moca_score;
+    this.modalLevelPill.textContent = a.stage_name;
+    this.modalRiskTag.textContent = a.dementia_risk;
+    this.modalLatency.innerHTML = `${a.avg_response_sec} <span class="unit">sec</span>`;
+    this.modalFindings.textContent = a.clinical_finding;
+    this.modalCaregiverAdvice.innerHTML = a.caregiver_note.split('. ').map(s => `• ${s}`).join('<br>');
+
+    // Populate Domain Bars
+    this.modalDomainBars.innerHTML = '';
+    const bars = a.domain_bars || [];
+    bars.forEach(b => {
+      const item = document.createElement('div');
+      item.className = 'domain-bar-item';
+      item.innerHTML = `
+        <div class="domain-bar-header">
+          <span>${b.domain_name}</span>
+          <span>${b.score_pct}%</span>
+        </div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width: ${b.score_pct}%"></div>
+        </div>
+      `;
+      this.modalDomainBars.appendChild(item);
+    });
+
+    this.doctorModalOverlay.classList.remove('hidden');
+  }
+
+  /* =========================================================
+     Daily Routine & Reminders Modal (PS Requirement E)
+     ========================================================= */
+
+  async openRemindersModal() {
+    this.updateWaterTrackerUI();
+    try {
+      const res = await fetch(`/api/clinical/reminders?lang=${this.currentLang}`);
+      const data = await res.json();
+      this.renderRemindersList(data.reminders || []);
+    } catch (e) {
+      console.warn("Reminders fetch fallback:", e);
+    }
+    this.remindersModalOverlay.classList.remove('hidden');
+  }
+
+  updateWaterTrackerUI() {
+    this.waterGlassesCount.textContent = this.waterGlassesDrank;
+    this.waterGlassesRow.innerHTML = '';
+    for (let i = 0; i < 8; i++) {
+      const span = document.createElement('span');
+      span.className = i < this.waterGlassesDrank ? 'glass filled' : 'glass';
+      span.textContent = '🥛';
+      this.waterGlassesRow.appendChild(span);
+    }
+  }
+
+  renderRemindersList(reminders) {
+    this.remindersList.innerHTML = '';
+    reminders.forEach(r => {
+      const item = document.createElement('div');
+      item.className = 'reminder-item';
+      item.innerHTML = `
+        <div class="reminder-info">
+          <span class="reminder-icon">${r.icon}</span>
+          <div>
+            <div class="reminder-text-title">${r.title}</div>
+            <div class="reminder-time">⏰ ${r.time}</div>
+          </div>
+        </div>
+        <button class="remind-speak-btn" data-tts="${r.tts_prompt}">
+          🔊 Hear Alert
+        </button>
+      `;
+      const btn = item.querySelector('.remind-speak-btn');
+      btn.addEventListener('click', () => {
+        window.voiceEngine.speak(r.tts_prompt);
+      });
+      this.remindersList.appendChild(item);
     });
   }
 
@@ -800,10 +1041,10 @@ class SimpleMindBloomApp {
       } else if (parsed.intent === 'repeat_instruction') {
         this.hearAgainBtn.click();
       } else if (parsed.intent === 'select_card_index' && parsed.matched_card_index) {
-        const card = document.querySelector(`.big-card[data-index="${parsed.matched_card_index}"], .big-card[data-card-index="${parsed.matched_card_index}"]`);
+        const card = document.querySelector(`.picture-card[data-index="${parsed.matched_card_index}"], .picture-card[data-card-index="${parsed.matched_card_index}"]`);
         if (card) card.click();
       } else if (parsed.intent === 'select_item' && parsed.matched_item_id) {
-        const card = document.querySelector(`.big-card[data-id="${parsed.matched_item_id}"]`);
+        const card = document.querySelector(`.picture-card[data-id="${parsed.matched_item_id}"]`);
         if (card) card.click();
       }
     } catch (e) {

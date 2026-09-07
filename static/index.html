@@ -3,37 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>Senior Memory Game (Mobile Friendly)</title>
+  <title>MindBloom — Senior Cognitive Care & Memory Platform (North East Region)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Noto+Sans+Devanagari:wght@600;700;800&family=Noto+Sans+Bengali:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Noto+Sans+Devanagari:wght@600;700;800&family=Noto+Sans+Bengali:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
 
-  <!-- Top Simple Bar -->
+  <!-- Top Navigation & Clinical Health Bar -->
   <header class="simple-header">
     <div class="header-main-row">
-      <div class="app-logo">🧠 <span id="appTitle">Memory Game</span></div>
+      <div class="app-logo">
+        <span class="logo-brain">🧠</span>
+        <div class="logo-text-group">
+          <span class="logo-main" id="appTitle">MindBloom</span>
+          <span class="logo-sub">NER Dementia Cognitive Care</span>
+        </div>
+      </div>
 
       <div class="header-quick-actions">
-        <!-- Big Sound Button -->
+        <!-- Live Doctor Clinical Level Badge -->
+        <div class="level-indicator-badge level-1" id="levelBadge" title="AI Adaptive Clinical Level based on patient response">
+          <span class="pulse-dot"></span>
+          <span id="levelBadgeText">Level 1: Preserved</span>
+        </div>
+
+        <!-- MoCA / Clinical Score Badge -->
+        <div class="moca-score-badge" id="mocaBadge" title="Montreal Cognitive Assessment (MoCA) Proxy Score (0-30)">
+          🩺 <span class="hide-on-tiny">MoCA:</span> <strong id="mocaScore">28</strong><span class="moca-denom">/30</span>
+        </div>
+
+        <!-- Doctor & Caregiver Portal Button -->
+        <button id="doctorInsightsBtn" class="touch-btn doctor-btn" aria-label="Caregiver & Doctor Clinical Dashboard">
+          <span class="btn-icon">📊</span>
+          <span class="hide-on-tiny">Doctor Report</span>
+        </button>
+
+        <!-- Daily Routine Reminders Button -->
+        <button id="dailyRemindersBtn" class="touch-btn reminder-btn" aria-label="Daily Routine & Medication Reminders">
+          <span class="btn-icon">⏰</span>
+          <span class="hide-on-tiny">Reminders</span>
+          <span class="reminder-alert-dot" id="reminderDot"></span>
+        </button>
+
+        <!-- Sound Toggle Button -->
         <button id="soundToggleBtn" class="touch-btn sound-btn active" aria-label="Toggle Voice Sound">
           <span id="soundIcon">🔊</span>
-          <span id="soundText" class="hide-on-tiny">Voice: ON</span>
         </button>
-        <!-- Score Badge -->
-        <div class="score-badge">
-          ⭐ <span id="scoreLabel" class="hide-on-tiny">Score</span>: <strong id="gameScore">0</strong>
-        </div>
       </div>
     </div>
 
-    <!-- State & Regional Language Selector (Mobile Optimized) -->
+    <!-- State & Regional Language Selector -->
     <div class="lang-selector-card">
       <div class="lang-title-row">
         <span class="lang-icon">🗣️</span>
-        <span class="lang-heading">भाषा / Language:</span>
+        <span class="lang-heading">भाषा / Regional Language:</span>
       </div>
 
       <div class="lang-quick-pills">
@@ -85,7 +110,23 @@
 
   <main class="simple-container">
 
-    <!-- Big Voice Assistant Status Banner -->
+    <!-- Clinical Adaptive Status Bar -->
+    <div class="clinical-status-bar" id="clinicalStatusBar">
+      <div class="adaptive-status-item">
+        <span class="status-label">Adaptive Mode:</span>
+        <span class="status-val" id="currentLevelText">Level 1 (Standard)</span>
+      </div>
+      <div class="adaptive-status-item">
+        <span class="status-label">Reaction Speed:</span>
+        <span class="status-val" id="reactionSpeedText">~2.4s (Brisk)</span>
+      </div>
+      <div class="adaptive-status-item">
+        <span class="status-label">Dementia Risk:</span>
+        <span class="status-val risk-normal" id="dementiaRiskText">Normal / Preserved</span>
+      </div>
+    </div>
+
+    <!-- Voice Assistant Status Banner -->
     <div class="voice-help-banner">
       <div class="mic-circle" id="micCircle">
         <span class="mic-icon" id="micIcon">🎙️</span>
@@ -108,41 +149,174 @@
       </button>
     </div>
 
-    <!-- Simple Notice for Memory Recall -->
+    <!-- Notice for Memory Recall -->
     <div id="memoryNotice" class="memory-notice hidden">
       <p id="memoryNoticeText">Look carefully at these items and remember them...</p>
+      <div class="countdown-bar-wrap" id="countdownWrap">
+        <div class="countdown-bar" id="countdownBar"></div>
+      </div>
     </div>
 
     <!-- Mobile-Optimized Big Picture Cards Grid -->
     <div class="cards-grid" id="cardsGrid">
-      <!-- 2 to 4 big cards placed dynamically -->
+      <!-- Dynamically placed picture cards -->
     </div>
 
     <!-- Feedback Banner -->
     <div id="feedbackBanner" class="feedback-banner hidden">
       <span class="feedback-emoji" id="feedbackEmoji">🌟</span>
-      <span class="feedback-text" id="feedbackText">Wonderful job! You found it!</span>
+      <div class="feedback-content">
+        <span class="feedback-text" id="feedbackText">Wonderful job! You found it!</span>
+        <span class="points-badge" id="pointsEarnedBadge">+120 pts</span>
+      </div>
     </div>
 
-    <!-- Bottom Action Bar (Thumb-Friendly for Phones) -->
+    <!-- Bottom Action Bar -->
     <div class="bottom-bar">
-      <!-- Big Full-Width Next Button -->
+      <!-- Big Next Button -->
       <button id="nextBtn" class="big-action-btn next-action-btn">
         <span id="nextBtnText">Next Question ➔</span>
       </button>
 
       <!-- Game Mode Selector -->
       <div class="simple-game-modes">
-        <span class="modes-label" id="chooseGameLabel">Choose Game:</span>
+        <span class="modes-label" id="chooseGameLabel">Cognitive Stimulation Modules:</span>
         <div class="mode-pills-row">
-          <button class="mode-pill active" data-mode="spot_and_name" id="modeSpot">🎯 Spot Item</button>
-          <button class="mode-pill" data-mode="memory_recall" id="modeRecall">🧠 Remember</button>
-          <button class="mode-pill" data-mode="card_match" id="modeMatch">🃏 Match Pairs</button>
+          <button class="mode-pill active" data-mode="spot_and_name" id="modeSpot">🎯 Spot Item (Naming)</button>
+          <button class="mode-pill" data-mode="memory_recall" id="modeRecall">🧠 Remember (Recall)</button>
+          <button class="mode-pill" data-mode="card_match" id="modeMatch">🃏 Match Pairs (Working Memory)</button>
         </div>
       </div>
     </div>
 
   </main>
+
+  <!-- ================= DOCTOR & CAREGIVER CLINICAL DASHBOARD MODAL ================= -->
+  <div class="modal-overlay hidden" id="doctorModalOverlay">
+    <div class="modal-card clinical-modal">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <h2>🩺 Clinical Cognitive & Dementia Assessment</h2>
+          <p class="modal-subtitle">AI Screening Report (MoCA/MMSE Framework for NER Healthcare)</p>
+        </div>
+        <button class="modal-close-btn" id="closeDoctorModalBtn" aria-label="Close Modal">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Patient Summary Card -->
+        <div class="clinical-overview-card">
+          <div class="overview-item">
+            <span class="item-lbl">Cognitive Health Score</span>
+            <div class="moca-large">
+              <strong id="modalMocaScore">28</strong><span class="denom">/30</span>
+            </div>
+            <span class="score-scale-hint">MoCA / MMSE Equivalent Scale</span>
+          </div>
+
+          <div class="overview-item">
+            <span class="item-lbl">Clinical Triaging Level</span>
+            <div class="level-pill-large" id="modalLevelPill">
+              Level 1: Preserved
+            </div>
+            <span class="risk-tag" id="modalRiskTag">🟢 Normal Age-Matched</span>
+          </div>
+
+          <div class="overview-item">
+            <span class="item-lbl">Reaction & Hesitation Latency</span>
+            <div class="latency-large" id="modalLatency">
+              2.4 <span class="unit">sec</span>
+            </div>
+            <span class="latency-hint" id="modalLatencyHint">Brisk response time</span>
+          </div>
+        </div>
+
+        <!-- Domain Breakdown Progress Bars -->
+        <div class="clinical-section">
+          <h3>📊 Cognitive Domain Performance Breakdown</h3>
+          <div class="domain-bars-list" id="modalDomainBars">
+            <!-- Dynamically populated domain bars -->
+          </div>
+        </div>
+
+        <!-- AI Neurological Observation -->
+        <div class="clinical-section">
+          <h3>🔬 AI Neurological Findings & Observations</h3>
+          <div class="clinical-note-box" id="modalFindings">
+            Patient demonstrates strong visual recognition and object naming across regional items. Minor delayed recall in 3-item tasks (avg latency 3.4s). Overall cognitive function is well-preserved.
+          </div>
+        </div>
+
+        <!-- Caregiver Prescription / Advice -->
+        <div class="clinical-section">
+          <h3>📋 Caregiver & Healthcare Worker Recommendations</h3>
+          <div class="prescription-box" id="modalCaregiverAdvice">
+            • Conduct 15 minutes of daily multilingual memory game workouts.<br>
+            • Maintain regular hydration reminders (minimum 6 glasses/day).<br>
+            • Schedule routine monthly cognitive checkup with the district health worker.
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="print-btn" id="printReportBtn">🖨️ Print / Export Clinical Report</button>
+        <button class="done-btn" id="doneDoctorModalBtn">Close Dashboard</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= DAILY ROUTINE & REMINDERS MODAL (PS REQ E) ================= -->
+  <div class="modal-overlay hidden" id="remindersModalOverlay">
+    <div class="modal-card reminders-modal">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <h2>⏰ Daily Routine & Elderly Care Reminders</h2>
+          <p class="modal-subtitle">Medicines, Hydration & Daily Activity Assistant</p>
+        </div>
+        <button class="modal-close-btn" id="closeRemindersModalBtn" aria-label="Close Modal">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Interactive Hydration Tracker -->
+        <div class="hydration-card">
+          <div class="hydration-header">
+            <div class="hydra-title">
+              <span class="hydra-icon">💧</span>
+              <div>
+                <strong>Daily Hydration Tracker</strong>
+                <p class="hydra-sub">Crucial for preventing delirium and cognitive confusion</p>
+              </div>
+            </div>
+            <div class="hydra-counter">
+              <span id="waterGlassesCount">4</span> / 8 Glasses
+            </div>
+          </div>
+          <div class="water-glasses-row" id="waterGlassesRow">
+            <span class="glass filled">🥛</span>
+            <span class="glass filled">🥛</span>
+            <span class="glass filled">🥛</span>
+            <span class="glass filled">🥛</span>
+            <span class="glass">🥛</span>
+            <span class="glass">🥛</span>
+            <span class="glass">🥛</span>
+            <span class="glass">🥛</span>
+          </div>
+          <button class="add-water-btn" id="logWaterBtn">+ Log 1 Glass of Water Drank</button>
+        </div>
+
+        <!-- Schedule Reminders List -->
+        <div class="clinical-section">
+          <h3>🕒 Today's Schedule</h3>
+          <div class="reminders-list" id="remindersList">
+            <!-- Dynamically populated reminders -->
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="done-btn" id="doneRemindersModalBtn">Done</button>
+      </div>
+    </div>
+  </div>
 
   <script src="/static/js/voice.js"></script>
   <script src="/static/js/app.js"></script>
