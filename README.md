@@ -60,13 +60,9 @@ MindBloom maps gameplay metrics to standardized neurological cognitive screening
 | **Nagaland** | 🌄 **Ao**, **Angami (Tenyidie)**, **Sumi** | Native Prompts (*Narok, Parr, Apuh, Tsüngkotepsü*) |
 | **Arunachal Pradesh** | ⛰️ **Nyishi**, **Adi**, **Galo** | Native Prompts (*Ayeng, Appun, Pupu, Gale*) |
 
----
+## 🚀 Universal Cross-Platform Quick Start
 
-## 🚀 Quick Start & Installation
-
-### Prerequisites
-- [Python 3.8+](https://www.python.org/downloads/)
-- Any modern web browser (Google Chrome, Microsoft Edge, Safari, Firefox)
+MindBloom is **100% platform-independent** and runs immediately after cloning on **Windows**, **macOS**, **Linux**, **WSL**, **Raspberry Pi**, and **Docker**.
 
 ### 1. Clone the Repository
 ```bash
@@ -74,29 +70,97 @@ git clone https://github.com/ManjiriKinage/mindbloom-dementia-care.git
 cd mindbloom-dementia-care
 ```
 
-### 2. Install Dependencies
-```bash
-pip install -r requirements.txt
+---
+
+### 2. Choose Your Platform
+
+#### 🪟 Windows (Command Prompt / PowerShell)
+Double-click `start.bat` or run:
+```cmd
+start.bat
+```
+*Or using PowerShell:*
+```powershell
+.\start.ps1
+```
+*Or with Python:*
+```cmd
+python run.py --open-browser
 ```
 
-### 3. Run the Application
+#### 🍎 macOS
+Make the script executable and run:
 ```bash
-python app.py
+chmod +x start.sh
+./start.sh
+```
+*Or with Python 3:*
+```bash
+python3 run.py --open-browser
+```
+> [!TIP]
+> **macOS AirPlay Note**: macOS Monterey / Ventura / Sonoma uses port 5000 for AirPlay Receiver by default. The launcher (`run.py` / `start.sh`) **automatically detects this** and seamlessly shifts to port 5001 or you can pass `python3 run.py --port 5001`.
+
+#### 🐧 Linux / WSL / Raspberry Pi
+```bash
+chmod +x start.sh
+./start.sh
+```
+*Or using `make`:*
+```bash
+make dev
 ```
 
-### 4. Open in Your Browser
-Visit **[http://127.0.0.1:5000](http://127.0.0.1:5000)** to start the game and explore the Doctor Portal!
+#### 🐳 Docker / Docker Compose (Any OS)
+Run without needing local Python or pip installed:
+```bash
+docker compose up --build
+```
+Access at **[http://127.0.0.1:5000](http://127.0.0.1:5000)**.
+
+---
+
+### 3. Open in Your Browser
+Visit **[http://127.0.0.1:5000](http://127.0.0.1:5000)** (or **http://127.0.0.1:5001** if port 5000 is occupied) to access the platform.
+
+---
+
+## 🛠️ CLI Options & Flexible Launching
+
+The universal launcher `run.py` provides cross-platform arguments:
+
+```bash
+# Auto-launch your default browser
+python3 run.py -b
+
+# Run on a custom port
+python3 run.py -p 8080
+
+# Run with high-performance FastAPI backend
+python3 run.py --fastapi
+
+# Force verify/install dependencies
+python3 run.py --install
+```
 
 ---
 
 ## 📁 Project Structure
 
 ```text
+├── run.py                  # Universal cross-platform launcher (Windows / macOS / Linux)
+├── start.sh                # 1-click launch script for macOS & Linux
+├── start.bat               # 1-click launch script for Windows CMD
+├── start.ps1               # 1-click launch script for Windows PowerShell
+├── Makefile                # Developer build & run automation
+├── Dockerfile              # Containerized deployment specification
+├── docker-compose.yml      # 1-command Docker Compose environment
 ├── app.py                  # Primary Flask backend server & clinical API routes
-├── requirements.txt        # Python package dependencies
+├── requirements.txt        # Universal cross-platform Python dependencies
 ├── LICENSE                 # MIT Open Source License
 ├── .gitignore              # Git ignore rules
-├── .gitattributes          # Line ending normalization
+├── .gitattributes          # Line ending normalization (LF/CRLF cross-OS)
+├── .dockerignore           # Docker build exclusion rules
 ├── backend/
 │   ├── __init__.py         # Package declaration
 │   ├── game_engine.py      # Clinical assessment engine, adaptive levels & 16+ languages

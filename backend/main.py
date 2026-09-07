@@ -8,8 +8,13 @@ import time
 from typing import Dict, Any, List, Optional
 from pathlib import Path
 
-# Add backend directory to path if needed
-sys.path.append(str(Path(__file__).parent))
+# Ensure backend and root directories are in sys.path
+CURRENT_DIR = Path(__file__).resolve().parent
+ROOT_DIR = CURRENT_DIR.parent
+if str(CURRENT_DIR) not in sys.path:
+    sys.path.insert(0, str(CURRENT_DIR))
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -188,7 +193,7 @@ def get_session_stats(session_id: str):
 
 
 # Static files mount
-static_dir = Path(__file__).parent.parent / "static"
+static_dir = ROOT_DIR / "static"
 if not static_dir.exists():
     static_dir.mkdir(parents=True, exist_ok=True)
 
@@ -205,8 +210,11 @@ def serve_index():
 
 if __name__ == "__main__":
     import uvicorn
+    host = os.environ.get("HOST", "0.0.0.0")
+    port = int(os.environ.get("PORT", 8000))
+    display_host = "127.0.0.1" if host == "0.0.0.0" else host
     print("=" * 60)
-    print(" 🧠 Starting Elderly Cognitive Voice Game Server...")
-    print(" 🌐 Open: http://127.0.0.1:8000 in your browser")
+    print(" [MindBloom] Elderly Cognitive Voice Game Server (FastAPI)")
+    print(f" Access at: http://{display_host}:{port}")
     print("=" * 60)
-    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True, app_dir=str(Path(__file__).parent))
+    uvicorn.run("backend.main:app" if ROOT_DIR in [Path(p) for p in sys.path] else "main:app", host=host, port=port, reload=True, app_dir=str(ROOT_DIR))

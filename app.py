@@ -6,13 +6,21 @@ Tailored for Elderly & Dementia Care in the North Eastern Region (NER) & All Ind
 import os
 import sys
 import time
+import argparse
+import webbrowser
 from pathlib import Path
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 
+# Ensure base directory is in sys.path for cross-platform imports
+BASE_DIR = Path(__file__).resolve().parent
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
+
 from backend.game_engine import game_engine, ITEM_CATALOG, LANGUAGES
 
-app = Flask(__name__, static_folder="static", static_url_path="/static")
+STATIC_DIR = BASE_DIR / "static"
+app = Flask(__name__, static_folder=str(STATIC_DIR), static_url_path="/static")
 CORS(app)
 
 # In-memory session store with clinical metrics
@@ -21,7 +29,7 @@ sessions = {}
 
 @app.route("/")
 def index():
-    return send_from_directory("static", "index.html")
+    return send_from_directory(str(STATIC_DIR), "index.html")
 
 
 @app.route("/api/languages", methods=["GET"])
@@ -184,11 +192,39 @@ def process_voice_command():
 
 
 if __name__ == "__main__":
-    if hasattr(sys.stdout, "reconfigure"):
-        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
-    port = int(os.environ.get("PORT", 5000))
+    # Ensure UTF-8 output across Windows, Linux, and macOS terminals
+    try:
+        if hasattr(sys.stdout, "reconfigure"):
+            sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+        if hasattr(sys.stderr, "reconfigure"):
+            sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
+    parser = argparse.ArgumentParser(description="MindBloom Cognitive Care Web Application")
+    parser.add_argument("--host", type=str, default=os.environ.get("HOST", "0.0.0.0"), help="Host IP to bind to (default: 0.0.0.0)")
+    parser.add_argument("--port", "-p", type=int, default=int(os.environ.get("PORT", 5000)), help="Port number (default: 5000)")
+    parser.add_argument("--debug", action="store_true", default=os.environ.get("FLASK_DEBUG", "1") == "1", help="Enable debug mode")
+    parser.add_argument("--no-debug", dest="debug", action="store_false", help="Disable debug mode")
+    parser.add_argument("--open-browser", "-b", action="store_true", help="Automatically open the web browser on launch")
+    args = parser.parse_args()
+
+    display_host = "127.0.0.1" if args.host == "0.0.0.0" else args.host
+    url = f"http://{display_host}:{args.port}"
+
     print("=" * 70)
     print(" [MindBloom] North East Dementia Care & Memory Platform (Flask)")
-    print(f" Access at: http://127.0.0.1:{port}")
+    print(f" * Server running on: {url}")
+    print(f" * Local interface:  http://localhost:{args.port}")
+    print(f" * Bound to:         {args.host}:{args.port}")
+    print(" * Press Ctrl+C to stop the server")
     print("=" * 70)
-    app.run(host="0.0.0.0", port=port, debug=True)
+
+    if args.open_browser:
+        try:
+            import threading
+            threading.Timer(1.0, lambda: webbrowser.open(url)).start()
+        except Exception:
+            pass
+
+    app.run(host=args.host, port=args.port, debug=args.debug)
