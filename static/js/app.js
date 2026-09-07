@@ -402,6 +402,7 @@ class SimpleMindBloomApp {
     this.modeSpot = document.getElementById('modeSpot');
     this.modeRecall = document.getElementById('modeRecall');
     this.modeMatch = document.getElementById('modeMatch');
+    this.modeRoutine = document.getElementById('modeRoutine');
     this.nerSelect = document.getElementById('nerLanguageSelect');
 
     // Modals
@@ -470,7 +471,7 @@ class SimpleMindBloomApp {
     });
 
     // Game Mode Pills
-    [this.modeSpot, this.modeRecall, this.modeMatch].forEach(btn => {
+    [this.modeSpot, this.modeRecall, this.modeMatch, this.modeRoutine].filter(Boolean).forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.mode-pill').forEach(p => p.classList.remove('active'));
         btn.classList.add('active');
@@ -591,7 +592,37 @@ class SimpleMindBloomApp {
       this.renderRecall();
     } else if (this.currentMode === 'card_match') {
       this.renderMatch();
+    } else if (this.currentMode === 'daily_routine') {
+      this.renderRoutine();
     }
+  }
+
+  /* =========================================================
+     Mode 4: Daily Routine & Orientation Recall
+     ========================================================= */
+
+  renderRoutine() {
+    const ui = this.getUIStrings();
+    this.mainQuestion.textContent = this.currentRound.instruction;
+    this.simpleHint.textContent = this.currentRound.subtext;
+    window.voiceEngine.speak(this.currentRound.tts_prompt);
+
+    this.cardsGrid.innerHTML = '';
+    const choices = this.currentRound.choices || [];
+    choices.forEach((item, idx) => {
+      const card = document.createElement('div');
+      card.className = 'picture-card';
+      card.setAttribute('data-id', item.id);
+      card.setAttribute('data-index', idx + 1);
+
+      card.innerHTML = `
+        <div class="card-emoji">${item.emoji}</div>
+        <div class="card-name">${item.name}</div>
+      `;
+
+      card.addEventListener('click', () => this.handleSpotChoice(item.id, card));
+      this.cardsGrid.appendChild(card);
+    });
   }
 
   /* =========================================================
@@ -1055,4 +1086,9 @@ class SimpleMindBloomApp {
 
 window.addEventListener('DOMContentLoaded', () => {
   new SimpleMindBloomApp();
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/static/sw.js')
+      .then(() => console.log('[MindBloom] Offline Service Worker active'))
+      .catch(err => console.log('[MindBloom] SW registration note:', err));
+  }
 });

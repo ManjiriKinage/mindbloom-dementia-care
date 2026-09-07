@@ -398,6 +398,74 @@ PURE_CATALOG: List[Dict[str, Any]] = [
     }
 ]
 
+# Daily Routine & Orientation Scenarios (Clinical Domain: Orientation & Context Recall)
+ROUTINE_SCENARIOS: List[Dict[str, Any]] = [
+    {
+        "id": "morning_routine",
+        "emoji": "☕",
+        "correct_id": "cup",
+        "questions": {
+            "en": "What warm drink do we usually enjoy when waking up in the morning?",
+            "mr": "सकाळी उठल्यावर आपण ताजेतवाने होण्यासाठी कोणता गरम पेय घेतो?",
+            "hi": "सुबह उठकर हम तरोताजा होने के लिए कौन-सा गरम पेय पीते हैं?",
+            "as": "ৰাতিপুৱা সাৰ পাই আমি সতেজ হ'বলৈ কি গৰম পানীয় খাওঁ?",
+            "bn": "সকালে ঘুম থেকে উঠে আমরা কোন গরম পানীয় পান করি?",
+            "mni": "য়ুকায়দা নহাক্না অহেন্বা থোইদোকপা নুংঙাইবা ফংনবা করি থকপগে?",
+            "lus": "Zingkar thawh hlimah eng thingpui nge kan in ṭhin?",
+            "kha": "Kaei kaba ngi dih mynstep ban pynsyaid ia ka met?",
+            "ne": "बिहान उठेर हामी कुन तातो पेय पिउने गर्छौं?"
+        }
+    },
+    {
+        "id": "morning_sun",
+        "emoji": "🌞",
+        "correct_id": "sun",
+        "questions": {
+            "en": "What shines brightly in the sky during the daytime?",
+            "mr": "दिवसा आकाशात काय तेजस्वी चमकते?",
+            "hi": "दिन के समय आकाश में कौन चमकता है?",
+            "as": "দিনৰ ভাগত আকাশত কি উজ্জ্বলকৈ জিলিকে?",
+            "bn": "দিনের বেলা আকাশে কী উজ্জ্বলভাবে আলো দেয়?",
+            "mni": "নুংথিলগী মতমদা অতোইদা করি ঙাল্লি?",
+            "lus": "Chhun laiah eng nge vanah êng em em mai?",
+            "kha": "Kaei kaba tyngshain ha suinbneng?",
+            "ne": "दिनको समयमा आकाशमा के चम्किन्छ?"
+        }
+    },
+    {
+        "id": "temple_bell",
+        "emoji": "🔔",
+        "correct_id": "bell",
+        "questions": {
+            "en": "What rings with a pleasant sound during morning prayers or worship?",
+            "mr": "सकाळच्या प्रार्थनेच्या किंवा पूजेच्या वेळी कशाचा गोड आवाज येतो?",
+            "hi": "सुबह की पूजा या प्रार्थना के समय किसकी मधुर आवाज़ गूंजती है?",
+            "as": "ৰাতিপুৱাৰ প্ৰাৰ্থনা বা নামঘৰত কিহৰ সুমধুৰ ধ্বনি বাজি উঠে?",
+            "bn": "সকালের প্রার্থনার সময় মন্দিরে কী বাজে?",
+            "mni": "আয়ুক্কী ঈশ্বরগী থৌরমদা করি খোঞ্জেল তাগনি?",
+            "lus": "Biakin dar eng nge zing lamah ri ṭhin?",
+            "kha": "Kaei kaba sawa haba leit duwai mynstep?",
+            "ne": "बिहानको पूजा वा प्रार्थनामा के बज्छ?"
+        }
+    },
+    {
+        "id": "traditional_scarf",
+        "emoji": "🧣",
+        "correct_id": "gamusa",
+        "questions": {
+            "en": "What traditional cloth or scarf do we wear around our neck for respect?",
+            "mr": "आदर आणि सन्मानासाठी आपण गळ्यात कोणते पारंपारिक उपरणे किंवा शाल घालतो?",
+            "hi": "सम्मान और आदर के लिए हम गले में क्या पहनते हैं?",
+            "as": "সন্মান আৰু আদৰ জনাবলৈ আমি ডিঙিত কি পৰিধান কৰোঁ?",
+            "bn": "সম্মান জানাতে আমরা গলায় কী চাদর বা গামছা দিই?",
+            "mni": "ইকাইখুম্নবা উৎনবা নাকোন্দা করি ফি শেৎপগে?",
+            "lus": "Inzahna lantir nan eng puan nge kan awrh ṭhin?",
+            "kha": "Kaei ka jainsem kaba ngi phong ban burom?",
+            "ne": "सम्मानका लागि हामी गलामा के ओढ्छौं?"
+        }
+    }
+]
+
 # Dedicated Full Natural Sentences for All Languages
 DEDICATED_SENTENCE_TEMPLATES: Dict[str, Dict[str, str]] = {
     "en": {
@@ -785,6 +853,32 @@ class MultilingualGameEngine:
                 "tts_prompt": tpl["match"],
                 "pair_praise_template": tpl["match_pair"],
                 "match_all_done": tpl["match_done"]
+            }
+
+        elif mode == "daily_routine":
+            scenario = random.choice(ROUTINE_SCENARIOS)
+            target_item = next((it for it in items_pool if it["id"] == scenario["correct_id"]), items_pool[0])
+            remaining = [it for it in items_pool if it["id"] != target_item["id"]]
+            distractor_count = 1 if level >= 3 else 2
+            distractors = random.sample(remaining, min(distractor_count, len(remaining)))
+            choices = [target_item] + distractors
+            random.shuffle(choices)
+
+            q_text = scenario["questions"].get(lang) or scenario["questions"].get("en")
+            sub_text = tpl["say"].format(name=target_item["name"])
+
+            return {
+                "mode": "daily_routine",
+                "lang": lang,
+                "clinical_level": level,
+                "target_item": target_item,
+                "target_id": target_item["id"],
+                "choices": choices,
+                "instruction": f"{scenario['emoji']} {q_text}",
+                "subtext": sub_text,
+                "tts_prompt": q_text,
+                "praise": tpl["praise"].format(name=target_item["name"]),
+                "try_again": tpl["try_again"]
             }
 
         else:
