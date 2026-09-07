@@ -10,8 +10,11 @@ from pathlib import Path
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 
-sys.path.insert(0, str(Path(__file__).parent / "backend"))
-from game_engine import game_engine, ITEM_CATALOG, LANGUAGES
+try:
+    from backend.game_engine import game_engine, ITEM_CATALOG, LANGUAGES
+except ImportError:
+    sys.path.insert(0, str(Path(__file__).parent / "backend"))
+    from game_engine import game_engine, ITEM_CATALOG, LANGUAGES
 
 app = Flask(__name__, static_folder="static", static_url_path="/static")
 CORS(app)
