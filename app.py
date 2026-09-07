@@ -184,9 +184,11 @@ def process_voice_command():
 
 
 if __name__ == "__main__":
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     port = int(os.environ.get("PORT", 5000))
     print("=" * 70)
-    print(" 🧠 MindBloom: North East Dementia Care & Memory Platform (Flask)")
-    print(f" 🌐 Access at: http://127.0.0.1:{port}")
+    print(" [MindBloom] North East Dementia Care & Memory Platform (Flask)")
+    print(f" Access at: http://127.0.0.1:{port}")
     print("=" * 70)
     app.run(host="0.0.0.0", port=port, debug=True)
