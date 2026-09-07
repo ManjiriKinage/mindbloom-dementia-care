@@ -18,7 +18,7 @@
         <span class="logo-brain">🧠</span>
         <div class="logo-text-group">
           <span class="logo-main" id="appTitle">MindBloom</span>
-          <span class="logo-sub">NER Dementia Cognitive Care</span>
+          <span class="logo-sub" id="logoSub">NER Dementia Cognitive Care</span>
         </div>
       </div>
 
@@ -31,19 +31,19 @@
 
         <!-- MoCA / Clinical Score Badge -->
         <div class="moca-score-badge" id="mocaBadge" title="Montreal Cognitive Assessment (MoCA) Proxy Score (0-30)">
-          🩺 <span class="hide-on-tiny">MoCA:</span> <strong id="mocaScore">28</strong><span class="moca-denom">/30</span>
+          🩺 <span class="hide-on-tiny" id="mocaBadgeLabel">MoCA:</span> <strong id="mocaScore">28</strong><span class="moca-denom">/30</span>
         </div>
 
         <!-- Doctor & Caregiver Portal Button -->
         <button id="doctorInsightsBtn" class="touch-btn doctor-btn" aria-label="Caregiver & Doctor Clinical Dashboard">
           <span class="btn-icon">📊</span>
-          <span class="hide-on-tiny">Doctor Report</span>
+          <span class="hide-on-tiny" id="doctorBtnText">Doctor Report</span>
         </button>
 
         <!-- Daily Routine Reminders Button -->
         <button id="dailyRemindersBtn" class="touch-btn reminder-btn" aria-label="Daily Routine & Medication Reminders">
           <span class="btn-icon">⏰</span>
-          <span class="hide-on-tiny">Reminders</span>
+          <span class="hide-on-tiny" id="remindersBtnText">Reminders</span>
           <span class="reminder-alert-dot" id="reminderDot"></span>
         </button>
 
@@ -58,7 +58,7 @@
     <div class="lang-selector-card">
       <div class="lang-title-row">
         <span class="lang-icon">🗣️</span>
-        <span class="lang-heading">भाषा / Regional Language:</span>
+        <span class="lang-heading" id="langHeading">भाषा / Regional Language:</span>
       </div>
 
       <div class="lang-quick-pills">
@@ -113,15 +113,15 @@
     <!-- Clinical Adaptive Status Bar -->
     <div class="clinical-status-bar" id="clinicalStatusBar">
       <div class="adaptive-status-item">
-        <span class="status-label">Adaptive Mode:</span>
+        <span class="status-label" id="lblAdaptiveMode">Adaptive Mode:</span>
         <span class="status-val" id="currentLevelText">Level 1 (Standard)</span>
       </div>
       <div class="adaptive-status-item">
-        <span class="status-label">Reaction Speed:</span>
+        <span class="status-label" id="lblReactionSpeed">Reaction Speed:</span>
         <span class="status-val" id="reactionSpeedText">~2.4s (Brisk)</span>
       </div>
       <div class="adaptive-status-item">
-        <span class="status-label">Dementia Risk:</span>
+        <span class="status-label" id="lblDementiaRisk">Dementia Risk:</span>
         <span class="status-val risk-normal" id="dementiaRiskText">Normal / Preserved</span>
       </div>
     </div>
@@ -166,30 +166,30 @@
     <div class="puzzle-container hidden" id="puzzleContainer">
       <!-- Picture Selection Bar -->
       <div class="puzzle-theme-bar">
-        <span class="theme-label">🖼️ Choose Picture:</span>
+        <span class="theme-label" id="puzzleThemeLabel">🖼️ Choose Picture:</span>
         <div class="theme-chips-row">
-          <button class="theme-chip active" data-img="/static/images/tea_garden.jpg" data-name="Assam Tea Garden">🍵 Tea Garden</button>
-          <button class="theme-chip" data-img="/static/images/golden_bell.jpg" data-name="Golden Temple Bell">🛕 Temple Bell</button>
-          <button class="theme-chip" data-img="/static/images/kopou_orchid.jpg" data-name="Kopou Orchid">🌺 Kopou Orchid</button>
+          <button class="theme-chip active" id="chipTeaGarden" data-img="/static/images/tea_garden.jpg" data-name="Assam Tea Garden">🍵 Tea Garden</button>
+          <button class="theme-chip" id="chipTempleBell" data-img="/static/images/golden_bell.jpg" data-name="Golden Temple Bell">🛕 Temple Bell</button>
+          <button class="theme-chip" id="chipKopouOrchid" data-img="/static/images/kopou_orchid.jpg" data-name="Kopou Orchid">🌺 Kopou Orchid</button>
         </div>
       </div>
 
       <!-- Puzzle Metrics Info -->
       <div class="puzzle-info-bar">
         <div class="p-info-box">
-          <span class="p-lbl">Moves</span>
+          <span class="p-lbl" id="lblMoves">Moves</span>
           <strong id="puzzleMoves">0</strong>
         </div>
         <div class="p-info-box">
-          <span class="p-lbl">Time</span>
+          <span class="p-lbl" id="lblTime">Time</span>
           <strong id="puzzleTimer">00:00</strong>
         </div>
         <div class="p-info-box">
-          <span class="p-lbl">Pieces</span>
+          <span class="p-lbl" id="lblPieces">Pieces</span>
           <strong id="puzzlePiecesCount">4</strong>
         </div>
         <div class="p-info-box">
-          <span class="p-lbl">Assist Guide</span>
+          <span class="p-lbl" id="lblGuide">Assist Guide</span>
           <strong id="puzzleGuideStatus" style="color:#059669;">ON</strong>
         </div>
       </div>

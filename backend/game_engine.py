@@ -478,7 +478,11 @@ DEDICATED_SENTENCE_TEMPLATES: Dict[str, Dict[str, str]] = {
         "recall_done": "Great memory! You remembered all the items!",
         "match": "Find the matching pairs! Tap two cards to turn them over.",
         "match_pair": "Great job! You found the pair of {name}!",
-        "match_done": "Terrific! You matched all the pairs!"
+        "match_done": "Terrific! You matched all the pairs!",
+        "puzzle_instruction": "🧩 {name} Jigsaw Puzzle",
+        "puzzle_subtext": "Drag the pieces to rebuild the peaceful picture",
+        "puzzle_tts": "Please rebuild the {name} puzzle picture by moving the pieces.",
+        "puzzle_praise": "Wonderful visuospatial skill! You completed the puzzle!"
     },
     "mr": {
         "find": "तुम्ही {name} शोधू शकता का?",
@@ -490,7 +494,11 @@ DEDICATED_SENTENCE_TEMPLATES: Dict[str, Dict[str, str]] = {
         "recall_done": "खूप छान! तुम्ही सर्व वस्तू बरोबर लक्षात ठेवल्या!",
         "match": "सारख्या जोड्या शोधा! दोन कार्डे उलटी करा.",
         "match_pair": "छान! तुम्हाला {name} ची जोडी सापडली!",
-        "match_done": "अभिनंदन! तुम्ही सर्व जोड्या बरोबर जुळवल्या!"
+        "match_done": "अभिनंदन! तुम्ही सर्व जोड्या बरोबर जुळवल्या!",
+        "puzzle_instruction": "🧩 {name} - जिगसॉ पझल",
+        "puzzle_subtext": "तुकडे जागेवर सरकवून सुंदर चित्र पूर्ण करा",
+        "puzzle_tts": "कृपया तुकडे जोडून {name} चे चित्र पूर्ण करा.",
+        "puzzle_praise": "खूप छान! तुम्ही जिगसॉ पझल यशस्वीरित्या पूर्ण केले!"
     },
     "hi": {
         "find": "क्या आप {name} पहचान सकते हैं?",
@@ -502,7 +510,11 @@ DEDICATED_SENTENCE_TEMPLATES: Dict[str, Dict[str, str]] = {
         "recall_done": "अद्भुत! आपने सभी वस्तुएं बिल्कुल सही याद रखीं!",
         "match": "एक जैसी जोड़ियां ढूंढें! दो कार्ड पलटें।",
         "match_pair": "शाबाश! आपको {name} की जोड़ी मिल गई!",
-        "match_done": "बधाई हो! आपने सभी जोड़ियां ढूंढ लीं!"
+        "match_done": "बधाई हो! आपने सभी जोड़ियां ढूंढ लीं!",
+        "puzzle_instruction": "🧩 {name} - जिगसॉ पहेली",
+        "puzzle_subtext": "टुकड़ों को सही जगह लगाकर चित्र पूरा करें",
+        "puzzle_tts": "कृपया टुकड़े जोड़कर {name} का चित्र पूरा करें।",
+        "puzzle_praise": "बहुत बढ़िया! आपने जिगसॉ पहेली सफलतापूर्वक पूरी कर ली!"
     },
     "as": {
         "find": "আপুনি {name} বিচাৰি পাবনে?",
@@ -514,7 +526,11 @@ DEDICATED_SENTENCE_TEMPLATES: Dict[str, Dict[str, str]] = {
         "recall_done": "চমৎকাৰ! আপুনি সকলো বস্তু মনত ৰাখিলে!",
         "match": "মিলা জোৰাবোৰ বাছক! দুটা কাৰ্ড লুটিয়াই চাওক।",
         "match_pair": "ভাল হৈছে! আপুনি {name} ৰ জোৰা পালে!",
-        "match_done": "অভিনন্দন! আপুনি সকলো জোৰা বিচাৰি পালে!"
+        "match_done": "অভিনন্দন! আপুনি সকলো জোৰা বিচাৰি পালে!",
+        "puzzle_instruction": "🧩 {name} - ছবি জোৰা খেল",
+        "puzzle_subtext": "টুকৰাবোৰ যথাস্থানত বহুৱাই শান্তিপূৰ্ণ ছবিখন গঢ়ক",
+        "puzzle_tts": "অনুগ্ৰহ কৰি টুকৰাবোৰ মিলাই {name}ৰ ছবিখন সম্পূৰ্ণ কৰক।",
+        "puzzle_praise": "চমৎকাৰ! আপুনি ছবি জোৰা খেলখন সুন্দৰকৈ সম্পূৰ্ণ কৰিলে!"
     },
     "brx": {
         "find": "नोंथाङा {name} खौ दिहुननो हागोन नामा?",
@@ -526,7 +542,11 @@ DEDICATED_SENTENCE_TEMPLATES: Dict[str, Dict[str, str]] = {
         "recall_done": "जोबोर मोजां! गासै बेसादखौ गोसोआव लाखिबाय!",
         "match": "गोरोबनाय जराफोरखौ दिहुन!",
         "match_pair": "मोजां! {name} नि जरा मोनबाय!",
-        "match_done": "साभास! नोंथाङा गासै जराफोरखौ मिलायबाय!"
+        "match_done": "साभास! नोंथाङा गासै जराफोरखौ मिलायबाय!",
+        "puzzle_instruction": "🧩 {name} - सावगारि जरा",
+        "puzzle_subtext": "टुकराफोरखौ मिलायना सावगारिखौ बानाय",
+        "puzzle_tts": "अननानै {name} नि सावगारिखौ जरा मिलायनानै आबुं खालाम।",
+        "puzzle_praise": "जोबोर मोजां! नोंथाङा सावगारिखौ मिलायबाय!"
     },
     "mni": {
         "find": "নহাক্না {name} ফংবা ঙমব্রা?",
@@ -538,7 +558,11 @@ DEDICATED_SENTENCE_TEMPLATES: Dict[str, Dict[str, str]] = {
         "recall_done": "য়াম্না ফরে! পুম্নমক নীংশিংলে!",
         "match": "মান্নবা মযোলশিং থিবীয়ু!",
         "match_pair": "য়াম্না ফরে! {name} গী মযোল ফংলে!",
-        "match_done": "নুংঙাইরে! পুম্নমক মযোল মান্নরে!"
+        "match_done": "নুংঙাইরে! পুম্নমক মযোল মান্নরে!",
+        "puzzle_instruction": "🧩 {name} - পজল শান্নবা",
+        "puzzle_subtext": "মচেৎশিং মতুং ইন্না শেমজিনবীয়ু",
+        "puzzle_tts": "চানবীদুনা {name} গী মচেৎশিং পুনশিন্দুনা ফোতো শেমজিনবীয়ু।",
+        "puzzle_praise": "য়াম্না ফরে! নহাক্না পজল শান্নবা লোইরে!"
     },
     "bn": {
         "find": "আপনি কি {name} খুঁজে পাবেন?",
@@ -550,7 +574,11 @@ DEDICATED_SENTENCE_TEMPLATES: Dict[str, Dict[str, str]] = {
         "recall_done": "চমৎকার! আপনি সব জিনিস মনে রেখেছেন!",
         "match": "একই রকম জোড়া খুঁজুন! দুটি কার্ড উল্টান।",
         "match_pair": "চমৎকার! আপনি {name} এর জোড়া পেয়ে গেছেন!",
-        "match_done": "অভিনন্দন! আপনি সব জোড়া খুঁজে পেয়েছেন!"
+        "match_done": "অভিনন্দন! আপনি সব জোড়া খুঁজে পেয়েছেন!",
+        "puzzle_instruction": "🧩 {name} - ছবির ধাঁধা",
+        "puzzle_subtext": "টুকরোগুলি সঠিক স্থানে বসিয়ে ছবিটি সম্পূর্ণ করুন",
+        "puzzle_tts": "অনুগ্রহ করে টুকরোগুলি মিলিয়ে {name} এর ছবিটি সম্পূর্ণ করুন।",
+        "puzzle_praise": "চমৎকার! আপনি ছবির ধাঁধাটি সম্পূর্ণ করেছেন!"
     },
     "trp": {
         "find": "Nung {name} no nuhba naiya de?",
@@ -562,7 +590,11 @@ DEDICATED_SENTENCE_TEMPLATES: Dict[str, Dict[str, str]] = {
         "recall_done": "Khamani kaham! Tei nuhba kha!",
         "match": "Jorano naina di!",
         "match_pair": "Kaham! {name} no nuhba kha!",
-        "match_done": "Khamani kaham! Jotono jora nuhba kha!"
+        "match_done": "Khamani kaham! Jotono jora nuhba kha!",
+        "puzzle_instruction": "🧩 {name} - Nokha Puzzle",
+        "puzzle_subtext": "Nokhano jora ridi",
+        "puzzle_tts": "{name} no jora ridi.",
+        "puzzle_praise": "Khamani kaham! Nokha puzzle pai kha!"
     },
     "lus": {
         "find": "Khawngaihin {name} hi i zawng hmu thei em?",
@@ -574,7 +606,11 @@ DEDICATED_SENTENCE_TEMPLATES: Dict[str, Dict[str, str]] = {
         "recall_done": "I hria a tha hle mai! I hre vek e!",
         "match": "A inangte zawng rawh le!",
         "match_pair": "I ti tha lutuk! {name} pair i hmu e!",
-        "match_done": "I ti tha lutuk e! I zawng hmu vek e!"
+        "match_done": "I ti tha lutuk e! I zawng hmu vek e!",
+        "puzzle_instruction": "🧩 {name} - Thlalak Puzzle",
+        "puzzle_subtext": "Thlalak themte hi rem khawm rawh le",
+        "puzzle_tts": "Khawngaihin {name} thlalak hi rem khawm rawh le.",
+        "puzzle_praise": "I ti tha lutuk e! Puzzle i rem zo e!"
     },
     "kha": {
         "find": "Phi lah ban shem ia ka {name}?",
@@ -586,7 +622,11 @@ DEDICATED_SENTENCE_TEMPLATES: Dict[str, Dict[str, str]] = {
         "recall_done": "Ka jingkynmaw kaba bha shisha!",
         "match": "Shem ia ki jingsyriem!",
         "match_pair": "Bha shibun! Phi la shem ia ka pair {name}!",
-        "match_done": "Khublei shibun! Phi la dep lut!"
+        "match_done": "Khublei shibun! Phi la dep lut!",
+        "puzzle_instruction": "🧩 {name} - Jigsaw Dur",
+        "puzzle_subtext": "Pynbeit ia ki dkhot dur ban pynwandur",
+        "puzzle_tts": "Sngewbha pynbeit ia ka dur {name}.",
+        "puzzle_praise": "Bha shibun! Phi la dep ia ka puzzle!"
     },
     "grt": {
         "find": "Na·a {name} ko man·genma?",
@@ -598,7 +638,11 @@ DEDICATED_SENTENCE_TEMPLATES: Dict[str, Dict[str, str]] = {
         "recall_done": "Gisik ra·ani namgipa!",
         "match": "Apsangiparangko am·bo!",
         "match_pair": "Namgipa kam! {name} jorako man·aha!",
-        "match_done": "Namgipa kam! Pilakko man·aha!"
+        "match_done": "Namgipa kam! Pilakko man·aha!",
+        "puzzle_instruction": "🧩 {name} - Noksa Puzzle",
+        "puzzle_subtext": "Noksarangko bakrime noksa dakbo",
+        "puzzle_tts": "{name} noksako ritingchate dakbo.",
+        "puzzle_praise": "Namgipa kam! Na·a puzzle ko matchotaha!"
     },
     "ne": {
         "find": "के तपाईं {name} चिन्न सक्नुहुन्छ?",
@@ -610,7 +654,11 @@ DEDICATED_SENTENCE_TEMPLATES: Dict[str, Dict[str, str]] = {
         "recall_done": "स्याबास! तपाईंले सबै सामान याद राख्नुभयो!",
         "match": "मिल्ने जोडीहरू खोज्नुहोस्! दुईवटा कार्ड पल्टाउनुहोस्।",
         "match_pair": "राम्रो! तपाईंले {name} को जोडी फेला पार्नुभयो!",
-        "match_done": "बधाई छ! तपाईंले सबै जोडी मिलाउनुभयो!"
+        "match_done": "बधाई छ! तपाईंले सबै जोडी मिलाउनुभयो!",
+        "puzzle_instruction": "🧩 {name} - जिगस पहेली",
+        "puzzle_subtext": "टुक्राहरू मिलाएर चित्र पूरा गर्नुहोस्",
+        "puzzle_tts": "कृपया टुक्राहरू मिलाएर {name} को चित्र पूरा गर्नुहोस्।",
+        "puzzle_praise": "धेरै राम्रो! तपाईंले जिगस पहेली पूरा गर्नुभयो!"
     },
     "lep": {
         "find": "Kásu {name} thám shuk ma?",
@@ -622,7 +670,11 @@ DEDICATED_SENTENCE_TEMPLATES: Dict[str, Dict[str, str]] = {
         "recall_done": "Ahyen ka-tshu!",
         "match": "Ríp zong mat!",
         "match_pair": "Ahyen ka-tshu! {name}!",
-        "match_done": "Ahyen ka-tshu!"
+        "match_done": "Ahyen ka-tshu!",
+        "puzzle_instruction": "🧩 {name} - Puzzle",
+        "puzzle_subtext": "Ríp zong mat o",
+        "puzzle_tts": "{name} ryu li.",
+        "puzzle_praise": "Ahyen ka-tshu! Puzzle pai sho!"
     },
     "bhu": {
         "find": "Khyed kyi {name} thong gi duk ga?",
@@ -634,7 +686,11 @@ DEDICATED_SENTENCE_TEMPLATES: Dict[str, Dict[str, str]] = {
         "recall_done": "Yag po jhung!",
         "match": "Dra bo thsol dang!",
         "match_pair": "Yag po jhung! {name}!",
-        "match_done": "Tashi delek! Tsang ma thsol song!"
+        "match_done": "Tashi delek! Tsang ma thsol song!",
+        "puzzle_instruction": "🧩 {name} - Ri mo puzzle",
+        "puzzle_subtext": "Ri mo zhing la bsgrigs dang",
+        "puzzle_tts": "{name} ri mo bsgrigs dang.",
+        "puzzle_praise": "Tashi delek! Yag po byung song!"
     },
     "ao": {
         "find": "Nei {name} ngutetta?",
@@ -646,7 +702,11 @@ DEDICATED_SENTENCE_TEMPLATES: Dict[str, Dict[str, str]] = {
         "recall_done": "Shisatsü tajung! Ajungbaji bilemtetogo!",
         "match": "Mesaoba bushiang!",
         "match_pair": "Tajung! {name} pair ngutetogo!",
-        "match_done": "Tajungtiba! Ajungbaji ngutetogo!"
+        "match_done": "Tajungtiba! Ajungbaji ngutetogo!",
+        "puzzle_instruction": "🧩 {name} - Noksa Puzzle",
+        "puzzle_subtext": "Noksa mejemang",
+        "puzzle_tts": "{name} noksa mejemang.",
+        "puzzle_praise": "Tajungtiba! Puzzle tembangogo!"
     },
     "njm": {
         "find": "Nko {name} ngu vi we ma?",
@@ -658,7 +718,11 @@ DEDICATED_SENTENCE_TEMPLATES: Dict[str, Dict[str, str]] = {
         "recall_done": "Kevi chie! Peteso kemesa!",
         "match": "Pu kevi ze!",
         "match_pair": "Kevi chie! {name}!",
-        "match_done": "Kevi chie!"
+        "match_done": "Kevi chie!",
+        "puzzle_instruction": "🧩 {name} - Puzzle",
+        "puzzle_subtext": "Dur mezhie",
+        "puzzle_tts": "{name} dur mezhie.",
+        "puzzle_praise": "Kevi chie! Puzzle mezhie!"
     },
     "nsm": {
         "find": "Nono {name} itha mu nishi kea?",
@@ -670,7 +734,11 @@ DEDICATED_SENTENCE_TEMPLATES: Dict[str, Dict[str, str]] = {
         "recall_done": "Kevi shishi!",
         "match": "Khughu zulo!",
         "match_pair": "Kevi shishi! {name}!",
-        "match_done": "Kevi shishi!"
+        "match_done": "Kevi shishi!",
+        "puzzle_instruction": "🧩 {name} - Puzzle",
+        "puzzle_subtext": "Noksa phu lo",
+        "puzzle_tts": "{name} noksa phu lo.",
+        "puzzle_praise": "Khulho kevi! Puzzle phu lo!"
     },
     "njz": {
         "find": "No {name} nam patung me?",
@@ -682,7 +750,11 @@ DEDICATED_SENTENCE_TEMPLATES: Dict[str, Dict[str, str]] = {
         "recall_done": "Ato nyima!",
         "match": "Paka to!",
         "match_pair": "Ato nyima! {name}!",
-        "match_done": "Ato nyima!"
+        "match_done": "Ato nyima!",
+        "puzzle_instruction": "🧩 {name} - Puzzle",
+        "puzzle_subtext": "Toka aag lu to",
+        "puzzle_tts": "{name} noksa toka.",
+        "puzzle_praise": "Ato nyima! Puzzle toka!"
     },
     "adi": {
         "find": "No {name} em pa mang ye?",
@@ -694,7 +766,11 @@ DEDICATED_SENTENCE_TEMPLATES: Dict[str, Dict[str, str]] = {
         "recall_done": "Aibelo!",
         "match": "Aibe toka!",
         "match_pair": "Aibelo! {name}!",
-        "match_done": "Aibelo!"
+        "match_done": "Aibelo!",
+        "puzzle_instruction": "🧩 {name} - Puzzle",
+        "puzzle_subtext": "Noksa goka",
+        "puzzle_tts": "{name} noksa goka.",
+        "puzzle_praise": "Aibelo! Puzzle goka!"
     },
     "gal": {
         "find": "No {name} em pa laku ye?",
@@ -706,7 +782,95 @@ DEDICATED_SENTENCE_TEMPLATES: Dict[str, Dict[str, str]] = {
         "recall_done": "Aibe!",
         "match": "Aibe to!",
         "match_pair": "Aibe! {name}!",
-        "match_done": "Aibe!"
+        "match_done": "Aibe!",
+        "puzzle_instruction": "🧩 {name} - Puzzle",
+        "puzzle_subtext": "Noksa goka",
+        "puzzle_tts": "{name} noksa goka.",
+        "puzzle_praise": "Aibe! Puzzle goka!"
+    }
+}
+
+PUZZLE_THEMES: Dict[str, Dict[str, Any]] = {
+    "tea_garden": {
+        "id": "tea_garden",
+        "img": "/static/images/tea_garden.jpg",
+        "emoji": "🍵",
+        "names": {
+            "en": "Assam Tea Garden",
+            "mr": "आसाम चहाची बाग",
+            "hi": "असम चाय का बागान",
+            "as": "অসমৰ চাহ বাগান",
+            "brx": "साहा बागान",
+            "mni": "চা লমপাক",
+            "bn": "আসামের চা বাগান",
+            "trp": "Cha Bagan",
+            "lus": "Thingpui Huan",
+            "kha": "Kper Sha",
+            "grt": "Cha A·ba",
+            "ne": "चिया बगान",
+            "lep": "Chiya",
+            "bhu": "Ja zhing",
+            "ao": "Cha Garden",
+            "njm": "Dzüku kper",
+            "nsm": "Chah Bag",
+            "njz": "Cha Bori",
+            "adi": "Cha Bori",
+            "gal": "Cha Bori"
+        }
+    },
+    "golden_bell": {
+        "id": "golden_bell",
+        "img": "/static/images/golden_bell.jpg",
+        "emoji": "🛕",
+        "names": {
+            "en": "Golden Temple Bell",
+            "mr": "सुवर्ण मंदिराची घंटा",
+            "hi": "स्वर्ण मंदिर की घंटी",
+            "as": "সোণালী মন্দিৰৰ ঘণ্টা",
+            "brx": "मन्दिरनि घान्थि",
+            "mni": "লাইশংগী সোনাগী ঘণ্টা",
+            "bn": "মন্দিরের সোনার ঘণ্টা",
+            "trp": "Khang",
+            "lus": "Biakin Dar",
+            "kha": "Ka Shakuria Kynja Ksiar",
+            "grt": "Gong",
+            "ne": "मन्दिरको सुनौलो घण्टी",
+            "lep": "Ghanti",
+            "bhu": "Tilbu",
+            "ao": "Chanu",
+            "njm": "Kide",
+            "nsm": "Ghati",
+            "njz": "Ghanti",
+            "adi": "Ghanti",
+            "gal": "Ghanti"
+        }
+    },
+    "kopou_orchid": {
+        "id": "kopou_orchid",
+        "img": "/static/images/kopou_orchid.jpg",
+        "emoji": "🌺",
+        "names": {
+            "en": "Kopou Orchid",
+            "mr": "कोपौ ऑर्किड फूल",
+            "hi": "कपौ आर्किड पुष्प",
+            "as": "কপৌ ফুল",
+            "brx": "खपौ बिबार",
+            "mni": "কোপৌ লৈ",
+            "bn": "কোপৌ অর্কিড ফুল",
+            "trp": "Kopou",
+            "lus": "Kopou Pangpar",
+            "kha": "U Tiew Kopou",
+            "grt": "Kopou Bibal",
+            "ne": "कपौ सुनाखरी",
+            "lep": "Kopou",
+            "bhu": "Kopou Meto",
+            "ao": "Kopou Narok",
+            "njm": "Kopou",
+            "nsm": "Kopou",
+            "njz": "Kopou",
+            "adi": "Kopou",
+            "gal": "Kopou"
+        }
     }
 }
 
@@ -736,10 +900,6 @@ class MultilingualGameEngine:
     def generate_round(self, mode: str, difficulty: int = 1, lang: str = "en", level: int = 1) -> Dict[str, Any]:
         """
         Generates cognitively adapted rounds according to clinical Level (1 to 4).
-        Level 1: Preserved Cognitive Function (4-5 choices, sharp distractors)
-        Level 2: Mild Cognitive Impairment (3-4 choices, standard pacing)
-        Level 3: Moderate Dementia Risk (2-3 choices, highlighted cues, longer retention)
-        Level 4: Assisted Sensory Care (2 high-contrast choices, errorless learning, soothing prompts)
         """
         lang = lang if lang in LANGUAGES_META else "en"
         tpl = self.get_sentences_for_lang(lang)
@@ -882,26 +1042,38 @@ class MultilingualGameEngine:
             }
 
         elif mode == "jigsaw_puzzle":
-            puzzles = [
-                {"id": "tea_garden", "name": "Assam Tea Garden", "img": "/static/images/tea_garden.jpg", "emoji": "🍵"},
-                {"id": "golden_bell", "name": "Golden Temple Bell", "img": "/static/images/golden_bell.jpg", "emoji": "🛕"},
-                {"id": "kopou_orchid", "name": "Kopou Orchid", "img": "/static/images/kopou_orchid.jpg", "emoji": "🌺"}
-            ]
-            selected_p = puzzles[0]
+            theme_key = "tea_garden"
+            theme_data = PUZZLE_THEMES.get(theme_key, PUZZLE_THEMES["tea_garden"])
+            theme_name = theme_data["names"].get(lang) or theme_data["names"].get("en")
+            
+            puzzles = []
+            for k, p in PUZZLE_THEMES.items():
+                puzzles.append({
+                    "id": p["id"],
+                    "name": p["names"].get(lang) or p["names"].get("en"),
+                    "img": p["img"],
+                    "emoji": p["emoji"]
+                })
+
             pieces_dim = 2 if level >= 3 else 3
+            instr_tpl = tpl.get("puzzle_instruction", "🧩 {name} Jigsaw Puzzle").format(name=theme_name)
+            sub_tpl = tpl.get("puzzle_subtext", "Drag the pieces to rebuild the peaceful picture")
+            tts_tpl = tpl.get("puzzle_tts", "Please rebuild the {name} picture by moving the pieces.").format(name=theme_name)
+            praise_tpl = tpl.get("puzzle_praise", "Wonderful visuospatial skill! You completed the puzzle!")
+
             return {
                 "mode": "jigsaw_puzzle",
                 "lang": lang,
                 "clinical_level": level,
-                "puzzle_info": selected_p,
+                "puzzle_info": {"id": theme_key, "name": theme_name, "img": theme_data["img"], "emoji": theme_data["emoji"]},
                 "puzzles_list": puzzles,
                 "rows": pieces_dim,
                 "cols": pieces_dim,
                 "total_pieces": pieces_dim * pieces_dim,
-                "instruction": f"🧩 {selected_p['name']} Jigsaw Puzzle",
-                "subtext": "Drag the pieces or tap to place them into the picture",
-                "tts_prompt": f"Please rebuild the {selected_p['name']} puzzle picture.",
-                "praise": "Wonderful visuospatial recall! You completed the puzzle!"
+                "instruction": instr_tpl,
+                "subtext": sub_tpl,
+                "tts_prompt": tts_tpl,
+                "praise": praise_tpl
             }
 
         else:
@@ -930,7 +1102,6 @@ class MultilingualGameEngine:
     ) -> Dict[str, Any]:
         """
         Clinical Assessment Engine (Mapped to MoCA / MMSE 30-Point Screening Framework)
-        Evaluates cognitive domains: Object Naming, Visual Recall, Working Memory, Visuospatial Function, and Reaction Speed.
         """
         if total_rounds == 0:
             correct_count = 0
@@ -958,11 +1129,7 @@ class MultilingualGameEngine:
                 if h.get("is_correct"):
                     domain_stats[m]["correct"] += 1
 
-        # Calculate MoCA / MMSE Proxy Score (0-30 scale)
-        # Base accuracy points (up to 20 pts)
         acc_points = (accuracy / 100.0) * 20.0
-        
-        # Latency / Hesitation points (up to 6 pts)
         if avg_time_sec <= 3.0:
             speed_pts = 6.0
         elif avg_time_sec <= 5.0:
@@ -972,12 +1139,9 @@ class MultilingualGameEngine:
         else:
             speed_pts = 1.5
 
-        # Score & Engagement bonus (up to 4 pts)
         score_pts = min(4.0, (current_score / 600.0) * 4.0)
-
         clinical_moca_score = min(30, max(4, round(acc_points + speed_pts + score_pts)))
 
-        # Clinical Level & Dementia Symptom Triaging
         if clinical_moca_score >= 26 or current_score >= 750:
             level = 1
             stage_name = "Level 1: Preserved Cognitive Function"
@@ -1007,7 +1171,6 @@ class MultilingualGameEngine:
             clinical_finding = "Severe recall hesitation and disorientation across multi-card selections. Responds best to comforting native voice audio and simple 2-choice pictures."
             caregiver_note = "Assisted living care advised. Focus on calming audio, sensory familiar cultural songs/prompts, and error-free positive engagement."
 
-        # Compute Domain Percentages for radar/bars
         domain_bars = []
         for key, d in domain_stats.items():
             pct = round((d["correct"] / d["total"] * 100)) if d["total"] > 0 else (85 if level == 1 else (70 if level == 2 else 50))
@@ -1038,94 +1201,41 @@ class MultilingualGameEngine:
 
     def get_daily_reminders(self, lang: str = "en") -> List[Dict[str, Any]]:
         """
-        Returns culturally adapted daily elderly routine reminders (PS Requirement E).
-        Includes Medicines, Hydration, Daily Activities, and Doctor Visits.
+        Returns culturally adapted daily elderly routine reminders.
         """
-        return [
-            {
-                "id": "rem_med_morning",
-                "time": "08:00 AM",
-                "category": "medicine",
-                "icon": "💊",
-                "title": "Morning Medicine & BP Check",
-                "tts_prompt": "It is morning medicine time. Please take your prescribed medicine with a warm glass of water.",
-                "status": "upcoming"
-            },
-            {
-                "id": "rem_hydration_1",
-                "time": "10:30 AM",
-                "category": "hydration",
-                "icon": "💧",
-                "title": "Hydration Reminder (1 Glass Water)",
-                "tts_prompt": "Time for a glass of clean water. Staying hydrated keeps your mind refreshed.",
-                "status": "due"
-            },
-            {
-                "id": "rem_activity_walk",
-                "time": "04:30 PM",
-                "category": "activity",
-                "icon": "🚶‍♂️",
-                "title": "Gentle Evening Walk & Memory Talk",
-                "tts_prompt": "Let us take a gentle 15-minute garden walk or have a cup of warm tea.",
-                "status": "upcoming"
-            },
-            {
-                "id": "rem_med_night",
-                "time": "08:30 PM",
-                "category": "medicine",
-                "icon": "🌙",
-                "title": "Night Medicine & Relaxation",
-                "tts_prompt": "Night time reminder. Please take your evening vitamins and have a restful sleep.",
-                "status": "upcoming"
-            },
-            {
-                "id": "rem_doctor_visit",
-                "time": "Tomorrow, 11:00 AM",
-                "category": "appointment",
-                "icon": "🩺",
-                "title": "District Neurologist Follow-Up",
-                "tts_prompt": "Reminder for your scheduled monthly cognitive health consultation.",
-                "status": "upcoming"
-            }
-        ]
-
-    def parse_voice_command(self, transcript: str, lang: str = "en") -> Dict[str, Any]:
-        text = transcript.strip().lower()
-        cleaned = re.sub(r'[^\w\s\u0900-\u097F\u0980-\u09FF\u1C00-\u1C4F]', '', text)
-
-        result = {
-            "raw_text": transcript,
-            "intent": "unknown",
-            "matched_item_id": None,
-            "matched_card_index": None
+        reminders_db = {
+            "en": [
+                {"id": "rem_1", "time": "08:00 AM", "icon": "💊", "title": "Morning Blood Pressure Medicine & Breakfast", "tts_prompt": "Good morning! It is time for your morning medicine and a warm breakfast."},
+                {"id": "rem_2", "time": "11:30 AM", "icon": "💧", "title": "Hydration Reminder: Drink 1 Fresh Glass of Water", "tts_prompt": "Time for a fresh glass of water to keep your mind active and healthy."},
+                {"id": "rem_3", "time": "02:00 PM", "icon": "🍵", "title": "Afternoon Herbal Tea & Reminiscence", "tts_prompt": "Enjoy a warm cup of afternoon tea and relax."},
+                {"id": "rem_4", "time": "05:30 PM", "icon": "🚶‍♂️", "title": "Light Garden Walk & Deep Breathing", "tts_prompt": "Let us take a gentle, refreshing walk in the garden."},
+                {"id": "rem_5", "time": "08:30 PM", "icon": "🌙", "title": "Night Medication & Calm Sleep Preparation", "tts_prompt": "Time for your night medicine. Wishing you a peaceful and restful sleep."}
+            ],
+            "mr": [
+                {"id": "rem_1", "time": "सकाळी ०८:००", "icon": "💊", "title": "सकाळचे औषध आणि नाश्ता", "tts_prompt": "शुभ प्रभात! सकाळचे औषध घेण्याची आणि नाश्ता करण्याची वेळ झाली आहे."},
+                {"id": "rem_2", "time": "सकाळी ११:३०", "icon": "💧", "title": "पाणी पिण्याची वेळ (१ ग्लास पाणी)", "tts_prompt": "शरीर ताजेतवाने ठेवण्यासाठी एक ग्लास पाणी प्या."},
+                {"id": "rem_3", "time": "दुपारी ०२:००", "icon": "🍵", "title": "दुपारचा गरम चहा आणि विश्रांती", "tts_prompt": "दुपारच्या चहाचा आनंद घ्या आणि थोडी विश्रांती घ्या."},
+                {"id": "rem_4", "time": "संध्याकाळी ०५:३०", "icon": "🚶‍♂️", "title": "संध्याकाळची हलकी रपेट", "tts_prompt": "चला, अंगणात किंवा बागेत थोडी शांत रपेट मारूया."},
+                {"id": "rem_5", "time": "रात्री ०८:३०", "icon": "🌙", "title": "रात्रीचे औषध आणि शांत झोप", "tts_prompt": "रात्रीचे औषध घेण्याची वेळ झाली आहे. शांत आणि गाढ झोप घ्या."}
+            ],
+            "hi": [
+                {"id": "rem_1", "time": "सुबह 08:00", "icon": "💊", "title": "सुबह की दवा और नाश्ता", "tts_prompt": "सुप्रभात! सुबह की दवा लेने और नाश्ता करने का समय हो गया है।"},
+                {"id": "rem_2", "time": "सुबह 11:30", "icon": "💧", "title": "पानी पीने का समय (1 ग्लास ताजा पानी)", "tts_prompt": "शरीर में ताजगी के लिए एक ग्लास पानी पी लीजिए।"},
+                {"id": "rem_3", "time": "दोपहर 02:00", "icon": "🍵", "title": "दोपहर की चाय और आराम", "tts_prompt": "दोपहर की चाय का आनंद लें और थोड़ा विश्राम करें।"},
+                {"id": "rem_4", "time": "शाम 05:30", "icon": "🚶‍♂️", "title": "शाम की हल्की सैर", "tts_prompt": "चलिए, बगीचे में ताजी हवा में थोड़ी सैर करते हैं।"},
+                {"id": "rem_5", "time": "रात 08:30", "icon": "🌙", "title": "रात की दवा और शांतिपूर्ण नींद", "tts_prompt": "रात की दवा लेने का समय हो गया है। शुभ रात्रि, सुखद नींद।"}
+            ],
+            "as": [
+                {"id": "rem_1", "time": "ৰাতিপুৱা ০৮:০০", "icon": "💊", "title": "ৰাতিপুৱাৰ ঔষধ আৰু জলপান", "tts_prompt": "সুপ্ৰভাত! ৰাতিপুৱাৰ ঔষধ লোৱা আৰু জলপান খোৱাৰ সময় হ'ল।"},
+                {"id": "rem_2", "time": "দুপৰীয়া ১১:৩০", "icon": "💧", "title": "পানী খোৱাৰ সোঁৱৰণি (১ গিলাচ পানী)", "tts_prompt": "শৰীৰ সতেজ ৰাখিবলৈ এতিয়া এক গিলাচ পানী খাওক।"},
+                {"id": "rem_3", "time": "অপৰাহ্ন ০২:০০", "icon": "🍵", "title": "দুপৰীয়াৰ চাহ আৰু জিৰণি", "tts_prompt": "গৰম চাহ একাপ খাই অলপ জিৰণি লওক।"},
+                {"id": "rem_4", "time": "সন্ধিয়া ০৫:৩০", "icon": "🚶‍♂️", "title": "সন্ধিয়াৰ পাতল খোজকঢ়া", "tts_prompt": "ব'লক, ফুলনিত অলপ মুক্ত বতাহ লওঁ।"},
+                {"id": "rem_5", "time": "ৰাতি ০৮:৩০", "icon": "🌙", "title": "ৰাতিৰ ঔষধ আৰু শান্ত নিদ্ৰা", "tts_prompt": "ৰাতিৰ ঔষধ খোৱাৰ সময় হৈছে। আপোনাৰ নিদ্ৰা সুখৰ হওক।"}
+            ]
         }
-
-        # Check aliases
-        for item in PURE_CATALOG:
-            for alias in item["aliases"]:
-                if alias.lower() in cleaned:
-                    result["intent"] = "select_item"
-                    result["matched_item_id"] = item["id"]
-                    return result
-
-        # Card numbers (1 to 6)
-        num_patterns = [
-            ("1", 1), ("एक", 1), ("one", 1), ("first", 1), ("ak", 1), ("ek", 1), ("se", 1),
-            ("2", 2), ("दोन", 2), ("दो", 2), ("দুই", 2), ("two", 2), ("second", 2), ("dui", 2), ("ne", 2),
-            ("3", 3), ("तीन", 3), ("tin", 3), ("three", 3), ("third", 3), ("tini", 3), ("tham", 3),
-            ("4", 4), ("चार", 4), ("char", 4), ("four", 4), ("fourth", 4), ("chari", 4), ("bri", 4),
-            ("5", 5), ("पाच", 5), ("पांच", 5), ("পাঁচ", 5), ("five", 5), ("ba", 5),
-            ("6", 6), ("सहा", 6), ("छह", 6), ("ছয়", 6), ("six", 6), ("do", 6)
-        ]
-        for word, num in num_patterns:
-            if word in cleaned:
-                result["intent"] = "select_card_index"
-                result["matched_card_index"] = num
-                return result
-
-        return result
+        return reminders_db.get(lang) or reminders_db["en"]
 
 
 game_engine = MultilingualGameEngine()
-ITEM_CATALOG = PURE_CATALOG
+ITEM_CATALOG = game_engine.get_catalog_for_lang("en")
 LANGUAGES = LANGUAGES_META
