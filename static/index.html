@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Senior Memory Game (Mobile Friendly)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Noto+Sans+Devanagari:wght@600;700;800&family=Noto+Sans+Bengali:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+  <!-- Top Simple Bar -->
+  <header class="simple-header">
+    <div class="header-main-row">
+      <div class="app-logo">🧠 <span id="appTitle">Memory Game</span></div>
+
+      <div class="header-quick-actions">
+        <!-- Big Sound Button -->
+        <button id="soundToggleBtn" class="touch-btn sound-btn active" aria-label="Toggle Voice Sound">
+          <span id="soundIcon">🔊</span>
+          <span id="soundText" class="hide-on-tiny">Voice: ON</span>
+        </button>
+        <!-- Score Badge -->
+        <div class="score-badge">
+          ⭐ <span id="scoreLabel" class="hide-on-tiny">Score</span>: <strong id="gameScore">0</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- State & Regional Language Selector (Mobile Optimized) -->
+    <div class="lang-selector-card">
+      <div class="lang-title-row">
+        <span class="lang-icon">🗣️</span>
+        <span class="lang-heading">भाषा / Language:</span>
+      </div>
+
+      <div class="lang-quick-pills">
+        <button class="lang-chip active" data-lang="en">🇬🇧 English</button>
+        <button class="lang-chip" data-lang="mr">🚩 मराठी (MH)</button>
+        <button class="lang-chip" data-lang="hi">🇮🇳 हिंदी</button>
+      </div>
+
+      <div class="ner-dropdown-wrap">
+        <select id="nerLanguageSelect" class="mobile-select-dropdown" aria-label="Select North East State Language">
+          <option value="" disabled selected>🌿 Select North East State Language...</option>
+          <optgroup label="Assam">
+            <option value="as">Assam: অসমীয়া (Assamese)</option>
+            <option value="brx">Assam: बड़ो (Bodo)</option>
+          </optgroup>
+          <optgroup label="Manipur">
+            <option value="mni">Manipur: মৈতৈলোন্ (Meitei)</option>
+          </optgroup>
+          <optgroup label="Tripura & Bengal">
+            <option value="bn">Tripura/Bengal: বাংলা (Bengali)</option>
+            <option value="trp">Tripura: Kokborok</option>
+          </optgroup>
+          <optgroup label="Mizoram">
+            <option value="lus">Mizoram: Mizo</option>
+          </optgroup>
+          <optgroup label="Meghalaya">
+            <option value="kha">Meghalaya: Khasi</option>
+            <option value="grt">Meghalaya: Garo</option>
+          </optgroup>
+          <optgroup label="Sikkim">
+            <option value="ne">Sikkim: नेपाली (Nepali)</option>
+            <option value="lep">Sikkim: Lepcha (ৰোং)</option>
+            <option value="bhu">Sikkim: Bhutia</option>
+          </optgroup>
+          <optgroup label="Nagaland">
+            <option value="ao">Nagaland: Ao</option>
+            <option value="njm">Nagaland: Angami</option>
+            <option value="nsm">Nagaland: Sumi</option>
+          </optgroup>
+          <optgroup label="Arunachal Pradesh">
+            <option value="njz">Arunachal: Nyishi</option>
+            <option value="adi">Arunachal: Adi</option>
+            <option value="gal">Arunachal: Galo</option>
+          </optgroup>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main class="simple-container">
+
+    <!-- Big Voice Assistant Status Banner -->
+    <div class="voice-help-banner">
+      <div class="mic-circle" id="micCircle">
+        <span class="mic-icon" id="micIcon">🎙️</span>
+      </div>
+      <div class="voice-text-box">
+        <p class="voice-state-title" id="voiceStatus">I am listening to you</p>
+        <p class="voice-subtext" id="voiceTranscript">Say: <strong>"Apple"</strong> or tap the picture</p>
+      </div>
+    </div>
+
+    <!-- Big Question Box with Speaker Button -->
+    <div class="question-box">
+      <div class="question-text-area">
+        <h1 class="main-question" id="mainQuestion">Can you find the 🍎 Apple?</h1>
+        <p class="simple-hint-text" id="simpleHint">Tap the picture or say the name aloud</p>
+      </div>
+      <button id="hearAgainBtn" class="hear-again-btn" aria-label="Hear the question again">
+        <span class="hear-icon">🔊</span>
+        <span id="hearAgainText">Hear Again</span>
+      </button>
+    </div>
+
+    <!-- Simple Notice for Memory Recall -->
+    <div id="memoryNotice" class="memory-notice hidden">
+      <p id="memoryNoticeText">Look carefully at these items and remember them...</p>
+    </div>
+
+    <!-- Mobile-Optimized Big Picture Cards Grid -->
+    <div class="cards-grid" id="cardsGrid">
+      <!-- 2 to 4 big cards placed dynamically -->
+    </div>
+
+    <!-- Feedback Banner -->
+    <div id="feedbackBanner" class="feedback-banner hidden">
+      <span class="feedback-emoji" id="feedbackEmoji">🌟</span>
+      <span class="feedback-text" id="feedbackText">Wonderful job! You found it!</span>
+    </div>
+
+    <!-- Bottom Action Bar (Thumb-Friendly for Phones) -->
+    <div class="bottom-bar">
+      <!-- Big Full-Width Next Button -->
+      <button id="nextBtn" class="big-action-btn next-action-btn">
+        <span id="nextBtnText">Next Question ➔</span>
+      </button>
+
+      <!-- Game Mode Selector -->
+      <div class="simple-game-modes">
+        <span class="modes-label" id="chooseGameLabel">Choose Game:</span>
+        <div class="mode-pills-row">
+          <button class="mode-pill active" data-mode="spot_and_name" id="modeSpot">🎯 Spot Item</button>
+          <button class="mode-pill" data-mode="memory_recall" id="modeRecall">🧠 Remember</button>
+          <button class="mode-pill" data-mode="card_match" id="modeMatch">🃏 Match Pairs</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="/static/js/voice.js"></script>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
